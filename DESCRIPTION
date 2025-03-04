@@ -1,0 +1,19 @@
+Package: d4ksiteweb
+Title: Data For Know
+Version: 0.0.1
+Authors@R: 
+    person("SERGIO", "EWANE, EBOUELE", , "info@dataforknow.com", role = c("aut", "cre"))
+Description: The website of Data For Know start up.
+License: MIT + file LICENSE
+Imports: 
+    config,
+    golem,
+    shiny
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Suggests: 
+    spelling,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Language: en-US
