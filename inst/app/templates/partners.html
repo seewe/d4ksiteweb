@@ -1,0 +1,52 @@
+<section>
+  <strong>
+    <h1 class="text-center text-black pt-5 mb-3"></h1>
+  </strong>
+
+  <div class="container mt-3">
+    <div
+      id="multiItemCarousel"
+      class="carousel slide carousel-dark text-center"
+      data-mdb-ride="carousel"
+    >
+      <!-- Inner -->
+      <div class="carousel-inner py-4">
+        {% for key, group in data_template.partners_data%}
+        <!-- slide group {{group.group_rang}} -->
+        <div class="{{group.group_class}}">
+          <div class="container">
+            <div class="row">
+              {% for key, item in group.group_partners %}
+              <div class="{{item.partner_class}}">
+                <img
+                  src="{{item.partners_img}}"
+                  class="card-img-top rounded-9"
+                  width="100"
+                  height="auto"
+                  alt="..."
+                />
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+      </div>
+
+      <!-- Controls -->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-mdb-target="#multiItemCarousel"
+        data-mdb-slide="prev"
+      ></button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-mdb-target="#multiItemCarousel"
+        data-mdb-slide="next"
+      ></button>
+    </div>
+  </div>
+</section>
+<!--Section: Content-->

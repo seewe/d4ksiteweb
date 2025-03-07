@@ -5,13 +5,11 @@
 #' @import shiny
 #' @noRd
 app_ui <- function(request) {
-  tagList(
+  htmltools::tagList(
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    fluidPage(
-      golem::golem_welcome_page() # Remove this line to start building your UI
-    )
+    mod_home_ui("home_1")
   )
 }
 
@@ -24,15 +22,17 @@ app_ui <- function(request) {
 #' @importFrom golem add_resource_path activate_js favicon bundle_resources
 #' @noRd
 golem_add_external_resources <- function() {
-  add_resource_path(
-    "www",
-    app_sys("app/www")
-  )
+  golem::add_resource_path("www", app_sys("app/www"))
+  golem::add_resource_path("templates", app_sys("app/templates"))
 
-  tags$head(
+  htmltools::tags$head(
     favicon(),
     bundle_resources(
       path = app_sys("app/www"),
+      app_title = "d4ksiteweb"
+    ),
+    bundle_resources(
+      path = app_sys("app/templates"),
       app_title = "d4ksiteweb"
     )
     # Add here other external resources

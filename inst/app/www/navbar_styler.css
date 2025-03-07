@@ -1,0 +1,121 @@
+
+/* Carousel styling */
+#introCarousel,
+#brand-carousel .carousel-inner,
+#brand-carousel .carousel-item,
+#brand-carousel .carousel-item.active {
+    height: 80vh;
+}
+
+#brand-carousel .carousel-item:nth-child(1) {
+    background-image: url('./img/logb1.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#brand-carousel .carousel-item:nth-child(2) {
+    background-image: url('./img/img2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#brand-carousel .carousel-item:nth-child(3) {
+    background-image: url('./img/img4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+/* Height for devices larger than 576px */
+@media (min-width: 992px) {
+    #introCarousel {
+    margin-top: -58.59px;
+    }
+}
+
+.navbar .nav-link {
+    color: #000000 !important;
+}
+
+.div-band-about{
+    background: linear-gradient(
+        0deg,
+        rgba(29, 236, 198, 0.212),
+        rgba(29, 236, 198, 0.212) 100%
+    );
+}
+.div-band-about hr,
+.div-band-about h1{
+    border-color: rgb(2, 63, 52);
+}
+
+.about-div{
+    background-image: url('./img/img4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.226),
+        rgba(29, 236, 198, 0.212) 100%
+    );
+}
+
+.partners-div{
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.226),
+        rgba(29, 77, 236, 0.267) 100%
+    );
+}
+
+.blogs-div{
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.226),
+        rgba(29, 77, 236, 0.267) 100%
+    );
+}
+
+.div-partners-blogs{
+    background: linear-gradient(
+        0deg,
+        rgba(29, 77, 236, 0.267),
+        rgba(29, 77, 236, 0.267) 100%
+    );
+}
+
+.contact-div{
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.226),
+        rgba(29, 77, 236, 0.267) 100%
+    );
+}
+
+.div-contact-follow{
+    background: linear-gradient(
+        0deg,
+        rgba(29, 77, 236, 0.493),
+        rgba(29, 77, 236, 0.267) 100%
+    );
+}
+
+.social-media-div {
+    background: linear-gradient(
+        0deg,
+        rgba(29, 77, 236, 0.493),
+        rgba(29, 77, 236, 0.493) 100%
+    );
+}
+
+.copyright-div {
+    background: linear-gradient(
+        180deg,
+        rgba(29, 77, 236, 0.493),
+        rgba(29, 77, 236, 0.493) 100%
+    );
+}

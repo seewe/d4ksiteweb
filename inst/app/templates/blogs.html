@@ -1,0 +1,49 @@
+<!--Section: Content-->
+<section>
+  <strong>
+    <h1 class="text-center text-black pt-5 mb-3"></h1>
+  </strong>
+
+  <div class="row">
+    {% for key, item in data_template.blogs_data %}
+    <div class="col-lg-3 col-md-12 mb-4">
+      <div class="card">
+        <div
+          class="bg-image hover-overlay"
+          data-mdb-ripple-init
+          data-mdb-ripple-color="light"
+        >
+          <img src="{{item.image}}" class="img-fluid" />
+          <a href="{{item.linked_page}}">
+            <div
+              class="mask"
+              style="background-color: rgba(251, 251, 251, 0.15)"
+            ></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{item.title}}</h5>
+          <p class="card-text">{{item.description}}</p>
+          <a
+            href="{{item.linked_page}}"
+            target="_blank"
+            class="btn btn-primary"
+            data-mdb-ripple-init
+            >Read more ...</a
+          >
+        </div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+  <div class="text-center">
+    <a
+      href="#!"
+      class="btn btn-primary mb-5"
+      data-mdb-ripple-init
+      target="_blank"
+      >Open more documents ...</a
+    >
+  </div>
+</section>
+<!--Section: Content-->

@@ -1,0 +1,88 @@
+<!-- Carousel wrapper -->
+<div
+  id="introCarousel"
+  class="carousel slide carousel-fade shadow-2-strong"
+  data-mdb-ride="carousel"
+  data-mdb-carousel-init
+>
+  <!-- Inner -->
+  <div id="brand-carousel" class="carousel-inner">
+    {% for key, item in data_template.brand_carousel %}
+    <!-- check the first brand-->
+    {% if item.rang == 1 %}
+    <!-- Single item -->
+    <div class="{{item.class}}">
+      <div
+        class="mask"
+        style="
+            background: linear-gradient(
+              45deg,
+              rgba(29, 236, 197, 0.7),
+              {{item.style_color}} 100%
+            );
+          "
+      >
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-black text-center" data-mdb-theme="dark">
+            <h1 class="mb-3">{{item.item_title}}</h1>
+            <strong>
+              <img
+                src="{{item.item_logo}}"
+                alt="logo"
+                style="width: 5%; height: auto"
+              />
+            </strong>
+            <h3 class="mb-4">{{item.item_description}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% else %}
+    <div class="{{item.class}}">
+      <div
+        class="mask"
+        style="
+          background: linear-gradient(
+            45deg,
+            rgba(29, 236, 197, 0.7),
+            {{item.style_color}} 100%
+          );
+        "
+      >
+        <div class="d-flex justify-content-center align-items-center h-100">
+          <div class="text-black text-center">
+            <h1>{{item.item_title}}</h1>
+            <strong>
+              <img
+                src="{{item.item_logo}}"
+                alt="logo"
+                style="width: 7%; height: auto"
+              />
+            </strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
+  </div>
+  <!-- Inner -->
+
+  <!-- Controls -->
+  <a
+    class="carousel-control-prev text-black"
+    href="#introCarousel"
+    role="button"
+    data-mdb-slide="prev"
+  >
+    <span class="sr-only">Previous</span>
+  </a>
+  <a
+    class="carousel-control-next text-black"
+    href="#introCarousel"
+    role="button"
+    data-mdb-slide="next"
+  >
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- Carousel wrapper -->

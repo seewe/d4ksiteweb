@@ -13,6 +13,25 @@
 
 # Engineering
 
+## renv folder ----
+attachment::create_renv_for_dev(
+  dev_pkg = c(
+    "renv",
+    "devtools",
+    "roxygen2",
+    "usethis",
+    "pkgload",
+    "testthat",
+    "remotes",
+    "covr",
+    "attachment",
+    "pak",
+    "dockerfiler",
+    "golem",
+    "testthat"
+  )
+)
+
 ## Dependencies ----
 ## Amend DESCRIPTION with dependencies read from package code parsing
 ## install.packages('attachment') # if needed.
@@ -20,21 +39,30 @@ attachment::att_amend_desc()
 
 ## Add modules ----
 ## Create a module infrastructure in R/
-golem::add_module(name = "name_of_module1", with_test = TRUE) # Name of the module
-golem::add_module(name = "name_of_module2", with_test = TRUE) # Name of the module
+golem::add_module(name = "home", with_test = FALSE) # Name of the module
+golem::add_module(name = "aboutus", with_test = FALSE) # Name of the module
+golem::add_module(name = "blogs", with_test = FALSE) # Name of the module
+golem::add_module(name = "contact", with_test = FALSE) # Name of the module
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
 golem::add_fct("helpers", with_test = TRUE)
-golem::add_utils("helpers", with_test = TRUE)
+golem::add_utils("navbar", with_test = FALSE)
+golem::add_utils("brand", with_test = FALSE)
+golem::add_utils("about", with_test = FALSE)
+golem::add_utils("partners", with_test = FALSE)
+golem::add_utils("blogs", with_test = FALSE)
+golem::add_utils("contact", with_test = FALSE)
+golem::add_utils("follow", with_test = FALSE)
 
 ## External resources
 ## Creates .js and .css files at inst/app/www
-golem::add_js_file("script")
-golem::add_js_handler("handlers")
-golem::add_css_file("custom")
-golem::add_sass_file("custom")
+golem::add_js_file("d4k_script")
+golem::add_js_handler("d4k_handlers")
+golem::add_css_file("d4k_styler")
+golem::add_sass_file("d4k_styler")
 golem::add_any_file("file.json")
+golem::add_resource_path("templates", "inst/app/templates")
 
 ## Add internal datasets ----
 ## If you have data in your package
@@ -55,7 +83,7 @@ devtools::build_vignettes()
 usethis::use_coverage()
 
 # Create a summary readme for the testthat subdirectory
-covrpage::covrpage()
+# covrpage::covrpage()
 
 ## CI ----
 ## Use this part of the script if you need to set up a CI
