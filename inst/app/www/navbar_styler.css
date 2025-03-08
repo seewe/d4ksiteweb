@@ -1,3 +1,42 @@
+/* Define some keyframe*/
+
+  @keyframes pulse {
+    0% { box-shadow: 0px 5px 0 1px rgba(16, 80, 71, 0.22); }
+    10% { box-shadow: 0px 5px 0 5px rgba(16, 80, 71, 0.20); }
+    20% { box-shadow: 0px 5px 0 10px rgba(16, 80, 71, 0.18); }
+    30% { box-shadow: 0px 5px 0 15px rgba(16, 80, 71, 0.16); }
+    40% { box-shadow: 0px 5px 0 20px rgba(16, 80, 71, 0.14); }
+    50% { box-shadow: 0px 5px 0 25px rgba(16, 80, 71, 0.12); }
+    60% { box-shadow: 0px 5px 0 30px rgba(16, 80, 71, 0.10); }
+    70% { box-shadow: 0px 5px 0 35px rgba(16, 80, 71, 0.09); }
+    80% { box-shadow: 0px 5px 0 40px rgba(16, 80, 71, 0.08); }
+    90% { box-shadow: 0px 5px 0 45px rgba(16, 80, 71, 0.07); }
+    100% { box-shadow: 0px 5px 0 50px rgba(16, 80, 71, 0.01); }
+  }
+
+  @keyframes pulsesocmed {
+    0% { box-shadow: 0px 5px 0 1px rgba(29, 77, 236, 0.22); }
+    10% { box-shadow: 0px 5px 0 2px rgba(29, 77, 236, 0.20); }
+    20% { box-shadow: 0px 5px 0 3px rgba(29, 77, 236, 0.18); }
+    30% { box-shadow: 0px 5px 0 4px rgba(29, 77, 236, 0.16); }
+    40% { box-shadow: 0px 5px 0 5px rgba(29, 77, 236, 0.14); }
+    50% { box-shadow: 0px 5px 0 6px rgba(29, 77, 236, 0.12); }
+    60% { box-shadow: 0px 5px 0 7px rgba(29, 77, 236, 0.10); }
+    70% { box-shadow: 0px 5px 0 8px rgba(29, 77, 236, 0.09); }
+    80% { box-shadow: 0px 5px 0 9px rgba(29, 77, 236, 0.08); }
+    90% { box-shadow: 0px 5px 0 10px rgba(29, 77, 236, 0.07); }
+    100% { box-shadow: 0px 5px 0 11px rgba(29, 77, 236, 0.01); }
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+
 
 /* Carousel styling */
 #introCarousel,
@@ -28,6 +67,14 @@
     background-position: center center;
 }
 
+.midlogo{   
+    border-radius: 500px 500px; 
+    border: 0px solid rgba(36, 252, 223, 0.589) ;
+    opacity: 1;
+    animation: pulse 3.5s ease-in infinite;
+    padding: 0%;
+    margin: 0;
+}
 
 /* Height for devices larger than 576px */
 @media (min-width: 992px) {
@@ -118,4 +165,8 @@
         rgba(29, 77, 236, 0.493),
         rgba(29, 77, 236, 0.493) 100%
     );
+}
+
+.socmed{
+    animation: pulsesocmed 3.5s ease-in infinite;
 }

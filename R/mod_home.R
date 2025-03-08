@@ -25,7 +25,8 @@ mod_home_server <- function(id) {
       about_skills = about_skills,
       partners_data = partners_data,
       blogs_data = blogs_data,
-      contact_list = contact_list
+      contact_list = contact_list,
+      social_media_data = social_media_data
     )
 
     output$html_content <- renderUI({
