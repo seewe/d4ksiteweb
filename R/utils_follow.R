@@ -7,18 +7,30 @@
 social_media_data <- list(
   socmed1 = list(
     icon = "youtube",
-    linked_page = "!#"
+    linked_page = "!#",
+    btn_cls = "danger",
+    txt_cls = "white",
+    pulse_clas = "socmeddg"
   ),
-  socmed1 = list(
+  socmed2 = list(
     icon = "facebook-f",
-    linked_page = "!#"
+    linked_page = "!#",
+    btn_cls = "primary",
+    txt_cls = "white",
+    pulse_clas = "socmeddg"
   ),
-  socmed1 = list(
+  socmed3 = list(
     icon = "twitter",
-    linked_page = "!#"
+    linked_page = "!#",
+    btn_cls = "light",
+    txt_cls = "info",
+    pulse_clas = "socmedlg"
   ),
-  socmed1 = list(
+  socmed4 = list(
     icon = "github",
-    linked_page = "https://github.com/seewe/d4ksiteweb"
+    linked_page = "https://github.com/seewe/d4ksiteweb",
+    btn_cls = "light",
+    txt_cls = "dark",
+    pulse_clas = "socmedlg"
   )
 )

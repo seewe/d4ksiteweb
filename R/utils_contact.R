@@ -24,3 +24,15 @@ contact_list <- list(
     phone = " +1 (899) 989-9999"
   )
 )
+
+#------------------------------
+# EMAIL using emayili package
+#------------------------------
+
+# configure smtp  -------------------------------
+smtp <- emayili::server(
+  host = "smtp.gmail.com",
+  port = 465,
+  username = Sys.getenv("MAIL_USERNAME"),
+  password = Sys.getenv("MAIL_PASSWORD")
+)

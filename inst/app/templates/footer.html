@@ -1,24 +1,27 @@
 <!--Footer-->
 <footer class="bg-light text-lg-start">
-  <div class=" social-media-div text-center py-3 align-items-center" >
-
-  {% for key, socmed in data_template.social_media_data %}
-  <a href="{{socmed.linked_page}}" 
-  class="btn btn-primary btn-floating mx-5 p-5 socmed" 
-  role="button" data-mdb-ripple-init
-  rel="nofollow" target="_blank">
-    <i class="fab fa-{{socmed.icon}} fa-2xl"></i>
-  </a>
-  {%endfor%}
-
+  <div class="social-media-div text-center py-3 align-items-center">
+    {% for key, socmed in data_template.social_media_data %}
+    <a
+      href="{{socmed.linked_page}}"
+      class="btn btn-{{socmed.btn_cls}} btn-floating mx-4 p-4 {{socmed.pulse_clas}}"
+      role="button"
+      data-mdb-ripple-init
+      rel="nofollow"
+      target="_blank"
+    >
+      <i class="fab fa-{{socmed.icon}} fa-2xl text-{{socmed.txt_cls}}"></i>
+    </a>
+    {%endfor%}
   </div>
 
   <!-- Copyright -->
   <div class="copyright-div text-center p-3">
-    <h3>© 2025 Copyright, <a class="text-dark" href="https://dataforknow.com/">D4Know.com</a></h3>
-    
+    <h3>
+      © 2025 Copyright,
+      <a class="text-dark" href="https://dataforknow.com/">D4Know.com</a>
+    </h3>
   </div>
   <!-- Copyright -->
 </footer>
 <!--Footer-->
-</html>

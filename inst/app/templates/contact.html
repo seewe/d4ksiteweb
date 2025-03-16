@@ -4,25 +4,26 @@
     <h1 class="text-center text-black pt-5 mb-3"></h1>
   </strong>
 
-  <div class="row bg-white rounded-5 border opacity-90 shadow">
+  <div
+    class="row bg-transparent text-dark rounded-5 border border-secondary opacity-90 shadow"
+  >
     <div class="col-md-6 pt-4">
       <div class="row d-flex justify-content-center">
         <div class="col-md-12">
-          <form class="needs-validation" novalidate>
+          <form id="contactForm" class="needs-validation" novalidate>
             <!-- 2 column grid layout with text inputs for the first and last names -->
             <div class="row mb-4">
               <div class="col">
                 <div class="form-outline" data-mdb-input-init>
                   <input
                     type="text"
-                    id="form3Example1"
+                    id="firstNameID"
                     class="form-control"
                     required
                   />
-                  <label class="form-label" for="form3Example1"
+                  <label class="form-label text-dark" for="firstNameID"
                     >First name</label
                   >
-                  <div class="valid-feedback">Looks good!</div>
                   <div class="invalid-feedback">Provide your firstname.</div>
                 </div>
               </div>
@@ -30,14 +31,13 @@
                 <div class="form-outline" data-mdb-input-init>
                   <input
                     type="text"
-                    id="form3Example2"
+                    id="lastNameID"
                     class="form-control"
                     required
                   />
-                  <label class="form-label" for="form3Example2"
+                  <label class="form-label text-dark" for="lastNameID"
                     >Last name</label
                   >
-                  <div class="valid-feedback">Looks good!</div>
                   <div class="invalid-feedback">Provide your lastname.</div>
                 </div>
               </div>
@@ -45,47 +45,62 @@
 
             <!-- Email input -->
             <div class="form-outline mb-4" data-mdb-input-init>
-              <input
-                type="email"
-                id="form3Example3"
-                class="form-control"
-                required
-              />
-              <label class="form-label" for="form3Example3"
+              <input type="email" id="emailID" class="form-control" required />
+              <label class="form-label text-dark" for="emailID"
                 >Email address</label
               >
               <div class="invalid-feedback">
                 Please provide a valid email address.
               </div>
-              <div class="valid-feedback">Looks good!</div>
             </div>
 
             <!-- Message content input -->
-            <div class="form-outline mb-4" data-mdb-input-init>
+            <div id="messageText" class="form-outline mb-4" data-mdb-input-init>
               <textarea
                 type="textarea"
-                id="form3Example4"
+                id="messageID"
                 class="form-control"
+                maxlength="1000"
+                rows="8"
+                cols="100"
+                placeholder="Max 800 characters"
                 required
               ></textarea>
-              <label class="form-label" for="form3Example4"
+              <label class="form-label text-dark" for="messageID"
                 >Enter your message here</label
               >
+              <p
+                style="background-color: rgba(195, 199, 212, 0.3)"
+                class="rounded-bottom px-2"
+              >
+                <span id="charCount">0</span>/800 characters
+              </p>
               <div class="invalid-feedback">
                 Please provide at list one word.
               </div>
-              <div class="valid-feedback">Looks good!</div>
             </div>
 
-            <div class="col-md-3 text-center">
-              <!-- Submit button -->
-              <button
-                type="submit"
-                class="btn btn-primary btn-block mb-4"
-                data-mdb-ripple-init
-              >
-                Send
-              </button>
+            <div class="row">
+              <div class="col-md-3 text-center">
+                <!-- Submit button -->
+                <button
+                  type="submit"
+                  class="btn btn-primary btn-block mb-4"
+                  data-mdb-ripple-init
+                >
+                  <i class="fas fa-paper-plane"></i> Send
+                </button>
+              </div>
+              <div class="col-md-3 text-center">
+                <!-- Reset button -->
+                <button
+                  type="reset"
+                  class="btn btn-primary btn-block mb-4"
+                  data-mdb-ripple-init
+                >
+                  <i class="fas fa-sync"></i> Refresh
+                </button>
+              </div>
             </div>
           </form>
         </div>
@@ -100,16 +115,16 @@
         <div class="col-lg-12 mb-5">
           <div class="d-flex align-items-start">
             <div class="flex-shrink-0">
-              <div class="p-3 badge-primary rounded-4">
-                <i class="fas fa-{{item.icon}} fa-lg text-primary fa-fw"></i>
+              <div class="p-3 badge-dark rounded-pill">
+                <i class="fas fa-{{item.icon}} fa-lg text-light fa-fw"></i>
               </div>
             </div>
             <div class="flex-grow-1 ms-4">
               <p class="fw-bold mb-1">{{item.title}}</p>
-              <p class="text-muted mb-1">
+              <p class="text-dark mb-1">
                 <i class="fas fa-at"></i> {{item.mail_adress}}
               </p>
-              <p class="text-muted mb-1">
+              <p class="text-dark mb-1">
                 <i class="fas fa-phone"></i> {{item.phone}}
               </p>
             </div>

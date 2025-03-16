@@ -1,102 +1,105 @@
-{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  {% include "header.html" %}
 
-<body>
-  <!--Navbar-->
-  {% include "navbar.html" %}
-  <!--brand-->
-  {% include "brand.html" %}
+  <body>
+    <!--Navbar-->
+    {% include "navbar.html" %}
+    <!--brand-->
+    {% include "brand.html" %}
 
-  <!--Main layout-->
+    <!--Main layout-->
 
-  <div class="div-band-about d-flex align-items-center">
-    <hr class="flex-grow-1 border border-secondary" />
+    <div class="div-band-about d-flex align-items-center">
+      <hr class="flex-grow-1 border border-secondary" />
+      <span
+        class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
+      >
+        <h1>WE ARE EXPERT ON</h1></span
+      >
+      <hr class="flex-grow-1 border border-secondary" />
+    </div>
+
+    <!--about us-->
+    <div class="about-div mt-0 shadow-0-strong">
+      <div class="container">{% include "about.html" %}</div>
+    </div>
+
+    <div class="d-flex align-items-center">
+      <hr class="flex-grow-1 border border-secondary" />
+      <span
+        class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
+      >
+        <h1>PARTNERS</h1></span
+      >
+      <hr class="flex-grow-1 border border-secondary" />
+    </div>
+
+    <!--Partners-->
+    <div class="partners-div mt-0 pb-5 shadow-0-strong">
+      <div class="container">{% include "partners.html" %}</div>
+    </div>
+
+    <div class="div-partners-blogs d-flex align-items-center">
+      <hr class="flex-grow-1 border border-secondary" />
+      <span
+        class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
+      >
+        <h1>BLOGS</h1></span
+      >
+      <hr class="flex-grow-1 border border-secondary" />
+    </div>
+
+    <!--blogs us-->
+    <div class="blogs-div mt-0 shadow-0-strong">
+      <div class="container">{% include "blogs.html" %}</div>
+    </div>
+
+    <div class="div-blogs d-flex align-items-center">
+      <hr class="flex-grow-1 border border-secondary" />
+      <span
+        class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
+      >
+        <h1>CONTACT US</h1></span
+      >
+      <hr class="flex-grow-1 border border-secondary" />
+    </div>
+
+    <!--contact us-->
+    <div class="contact-div mt-0 pb-5 shadow-0-strong">
+      <div class="container">{% include "contact.html" %}</div>
+    </div>
+
+    <!--Main layout-->
+
+    <!-- MDB JS script-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.es.min.js"
+      integrity="sha512-BeqBR1tSs66TKfRbufAK3jbKyG2ysd45VAiL+/2QFMEhlJ6JAvzvl6RVTiUh2yi/cVseSrGOgc+QvIUbTubDFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.umd.min.js"
+      integrity="sha512-Dz2rUPE4WINN15fNibH3zUk9Inj1dje/JX4yXVY5vVkyvLNYEYFv2PQVi2+UeY44UmdTLS1dYo/Lm09rIAoQlw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <!-- d4k custum script-->
+    <script src="../www/d4k_script.js"></script>
+    <script src="../www/d4k_handlers.js"></script>
+  </body>
+
+  <div class="div-contact-follow d-flex align-items-center">
+    <hr class="flex-grow-1 border border-black" />
     <span
-      class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
+      class="my-5 mx-0 px-5 py-3 text-black border border-black rounded-9 shadow-5-strong"
     >
-      <h1>WE ARE EXPERT ON</h1></span
+      <h4>follow us</h4></span
     >
-    <hr class="flex-grow-1 border border-secondary" />
+    <hr class="flex-grow-1 border border-black" />
   </div>
 
-  <!--about us-->
-  <div class="about-div mt-0 shadow-0-strong">
-    <div class="container">{% include "about.html" %}</div>
-  </div>
-
-  <div class="d-flex align-items-center">
-    <hr class="flex-grow-1 border border-secondary" />
-    <span
-      class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
-    >
-      <h1>PARTNERS</h1></span
-    >
-    <hr class="flex-grow-1 border border-secondary" />
-  </div>
-
-  <!--Partners-->
-  <div class="partners-div mt-0 pb-5 shadow-0-strong">
-    <div class="container">{% include "partners.html" %}</div>
-  </div>
-
-  <div class="div-partners-blogs d-flex align-items-center">
-    <hr class="flex-grow-1 border border-secondary" />
-    <span
-      class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
-    >
-      <h1>BLOGS</h1></span
-    >
-    <hr class="flex-grow-1 border border-secondary" />
-  </div>
-
-  <!--blogs us-->
-  <div class="blogs-div mt-0 shadow-0-strong">
-    <div class="container">{% include "blogs.html" %}</div>
-  </div>
-
-  <div class="div-blogs d-flex align-items-center">
-    <hr class="flex-grow-1 border border-secondary" />
-    <span
-      class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
-    >
-      <h1>CONTACT US</h1></span
-    >
-    <hr class="flex-grow-1 border border-secondary" />
-  </div>
-
-  <!--contact us-->
-  <div class="contact-div mt-0 pb-5 shadow-0-strong">
-    <div class="container">{% include "contact.html" %}</div>
-  </div>
-
-  <!--Main layout-->
-
-  <!-- MDB JS script-->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.es.min.js"
-    integrity="sha512-BeqBR1tSs66TKfRbufAK3jbKyG2ysd45VAiL+/2QFMEhlJ6JAvzvl6RVTiUh2yi/cVseSrGOgc+QvIUbTubDFQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.umd.min.js"
-    integrity="sha512-Dz2rUPE4WINN15fNibH3zUk9Inj1dje/JX4yXVY5vVkyvLNYEYFv2PQVi2+UeY44UmdTLS1dYo/Lm09rIAoQlw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-
-  <!-- d4k custum script-->
-  <script src="../www/d4k_script.js"></script>
-  <script src="../www/d4k_handlers.js"></script>
-</body>
-
-<div class="div-contact-follow d-flex align-items-center">
-  <hr class="flex-grow-1 border border-black" />
-  <span
-    class="my-5 mx-0 px-5 py-3 text-black border border-black rounded-9 shadow-5-strong"
-  >
-    <h4>follow us</h4></span
-  >
-  <hr class="flex-grow-1 border border-black" />
-</div>
-
-{% include "footer.html" %}
+  {% include "footer.html" %}
+</html>

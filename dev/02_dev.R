@@ -28,7 +28,8 @@ attachment::create_renv_for_dev(
     "pak",
     "dockerfiler",
     "golem",
-    "testthat"
+    "testthat",
+    "emayili"
   )
 )
 
