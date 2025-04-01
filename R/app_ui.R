@@ -9,7 +9,14 @@ app_ui <- function(request) {
     # Leave this function for adding external resources
     golem_add_external_resources(),
     # Your application UI logic
-    mod_home_ui("home_1")
+    shiny.router::router_ui(
+      shiny.router::route("/", mod_home_ui("home_1")),
+      shiny.router::route("developer", mod_developer_ui("developer_1")),
+      shiny.router::route("storage", mod_developer_ui("storage_1")),
+      shiny.router::route("modeler", htmltools::h1("modelers page")),
+      shiny.router::route("publisher", htmltools::h1("publisher page")),
+      shiny.router::route("moredocument", htmltools::h1("More blog documents"))
+    )
   )
 }
 

@@ -30,4 +30,13 @@ app_server <- function(input, output, session) {
 
   # Handle contact form data
   shiny::callModule(mod_contact_server, "contact_1", RV = shiny::reactive(rv))
+
+  # Developer page
+  shiny::callModule(mod_developer_server, "developer_1")
+
+  # Storage page
+  shiny::callModule(mod_storage_server, "storage_1")
+
+  # router
+  shiny.router::router_server("/")
 }

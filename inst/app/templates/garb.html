@@ -3,841 +3,142 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data For Know</title>
+    <title>MDB Profile with Sticky Footer</title>
+    <!-- MDB Bootstrap CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.0.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      /* Full-height container to push footer down */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
 
-    <!-- Custum styler -->
-    <link rel="stylesheet" href="../www/navbar_styler.css" />
-    <!-- Font Awesome -->
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-      rel="stylesheet"
-    />
-    <!-- MDB -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.min.css"
-      integrity="sha512-viZnJCMu1IKCniSdlMH+5f8c7mOlAjqg53E3ycTycIGTk+20PCDuszNiWMYZ+g2Vwzu40Qp5JDPjpB+NHT0Jzw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+      .content {
+        flex: 1; /* Pushes footer to the bottom */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      /* Footer stays at bottom */
+      .footer {
+        background: #007bff;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        width: 100%;
+      }
+
+      /* Profile container styling */
+      .profile-container {
+        max-width: 900px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: left;
+      }
+
+      .profile-image {
+        position: absolute;
+        width: 400px;
+        height: auto;
+        z-index: -1;
+        top: 10px;
+        right: -40px;
+        opacity: 0.9;
+      }
+
+      .profile-image img {
+        width: 100%;
+        border-radius: 10px;
+        transform: rotate(5deg);
+        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .profile-card {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 30px;
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 1;
+      }
+
+      .profile-card h4 {
+        color: #007bff;
+        font-weight: bold;
+      }
+
+      .stars {
+        color: #007bff;
+        font-size: 18px;
+      }
+
+      /* Responsive Fix */
+      @media (max-width: 768px) {
+        .profile-container {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .profile-image {
+          position: relative;
+          right: 0;
+          top: 0;
+          width: 100%;
+          opacity: 1;
+        }
+
+        .profile-card {
+          width: 90%;
+        }
+      }
+    </style>
   </head>
-</html>
-
-<body>
-  <!--Navbar-->
-<!-- Navbar -->
-<nav
-  class="navbar navbar-expand-lg navbar-dark d-none d-lg-block"
-  style="z-index: 2000"
->
-  <div class="container-fluid">
-    <!-- Navbar brand -->
-    <a
-      class="navbar-brand nav-link"
-      target="_blank"
-      href="https://mdbootstrap.com/docs/standard/"
-    >
-      <img src="../www/img/d4kico.png" alt="d4k" width="32" height="32" />
-      <strong>D4K</strong>
-    </a>
-    <button
-      class="navbar-toggler"
-      type="button"
-      data-mdb-collapse-init
-      data-mdb-target="#navbarExample01"
-      aria-controls="navbarExample01"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarExample01">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item active">
-          <a class="nav-link" aria-current="page" href="#intro"
-            ><strong>Home</strong></a
-          >
-        </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="#About" rel="nofollow" target="_blank"
-            ><strong>About</strong></a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#blogs" rel="nofollow" target="_blank"
-            ><strong>Blogs</strong></a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#contact" rel="nofollow" target="_blank"
-            ><strong>Contact</strong></a
-          >
-        </li>
-      </ul>
-
-      <ul class="navbar-nav list-inline">
-        <!-- Icons -->
-
-        <li class="">
-          <a class="nav-link" href="https://www.facebook.com/mdbootstrap" rel="nofollow" target="_blank">
-            <i class="fab fa-facebook"></i>
-          </a>
-        </li>
-        <li class="">
-          <a class="nav-link" href="https://github.com/mdbootstrap/mdb-ui-kit" rel="nofollow" target="_blank">
-            <i class="fab fa-github"></i>
-          </a>
-        </li>
-        <li class="">
-          <a class="nav-link" href="https://twitter.com/MDBootstrap" rel="nofollow" target="_blank">
-            <i class="fab fa-twitter"></i>
-          </a>
-        </li>
-        <li class="">
-          <a class="nav-link" href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" rel="nofollow" target="_blank">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- Navbar -->
-  <!--brand-->
-<!-- Carousel wrapper -->
-<div
-  id="introCarousel"
-  class="carousel slide carousel-fade shadow-2-strong"
-  data-mdb-ride="carousel"
-  data-mdb-carousel-init
->
-  <!-- check the first brand-->
-  <!-- Single item -->
-  <div class="carousel-item active">
-    <div
-      class="mask"
-      style="background: linear-gradient(
-            45deg,
-            rgba(29, 236, 197, 0.7),
-            rgba(134, 177, 240, 0.7) 100%
-          );
-        "
-    >
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-black text-center" data-mdb-theme="dark">
-          <h1 class="mb-3">Data For Know</h1>
-          <strong>
-            <img
-              src="../www/img/logn.png"
-              alt="logo"
-              style="width: 5%; height: auto"
-            />
-          </strong>
-          <h3 class="mb-4">Your data improves your knowledge</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- check the first brand-->
-  <div class="carousel-item">
-    <div
-      class="mask"
-      style="background: linear-gradient(
-          45deg,
-          rgba(29, 236, 197, 0.7),
-          rgba(241, 234, 170, 0.7) 100%
-        );
-      "
-    >
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-black text-center">
-          <h1>Your <strong>DATA</strong> improve your <strong>POWER</strong></h1>
-          <strong>
-            <img
-              src="../www/img/logn.png"
-              alt="logo"
-              style="width: 7%; height: auto"
-            />
-          </strong>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- check the first brand-->
-  <div class="carousel-item">
-    <div
-      class="mask"
-      style="background: linear-gradient(
-          45deg,
-          rgba(29, 236, 197, 0.7),
-          rgba(241, 172, 172, 0.479) 100%
-        );
-      "
-    >
-      <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="text-black text-center">
-          <h1>Your <strong>KNOWLEDGE</strong> helps you <strong>GROW</strong></h1>
-          <strong>
-            <img
-              src="../www/img/logn.png"
-              alt="logo"
-              style="width: 7%; height: auto"
-            />
-          </strong>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <a
-    class="carousel-control-prev text-black"
-    href="#introCarousel"
-    role="button"
-    data-mdb-slide="prev"
-  >
-    <span class="sr-only">Previous</span>
-  </a>
-  <a
-    class="carousel-control-next text-black"
-    href="#introCarousel"
-    role="button"
-    data-mdb-slide="next"
-  >
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-<!-- Carousel wrapper -->
-
-  <!--Main layout-->
-
-  <div class="div-band-about d-flex align-items-center">
-    <hr class="flex-grow-1 border border-secondary" />
-    <span
-      class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
-    >
-      <h1>WE ARE EXPERT ON</h1></span
-    >
-    <hr class="flex-grow-1 border border-secondary" />
-  </div>
-
-  <!--about us-->
-  <div class="about-div mt-0 shadow-0-strong">
-    <div class="container"><!--Section: about-->
-<section>
-  <strong>
-    <h1 class="text-center text-black pt-5 mb-3"></h1>
-  </strong>
-  <div class="row">
-    <div class="vr vr-blurry position-relative my-5 h-600"></div>
-    <div class="col">
-      <div class="col-lg-12 mb-5">
-        <div class="d-flex align-items-start">
-          <div class="flex-shrink-0">
-            <div class="p-3 badge-primary rounded-4">
-              <i class="fas fa-file-code fa-lg text-primary fa-fw"></i>
-            </div>
-          </div>
-          <div class="flex-grow-1 ms-4">
-            <h2 class="fw-bold mb-1">CODING</h2>
-            <p class="text-muted mb-1 text-justify">
-              <i class="fas fa-comments"></i>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Praesentium aspernatur explicabo inventore. Sunt maxime eveniet
-              voluptas quidem, totam nesciunt praesentium earum, nisi quibusdam
-              tempora corporis dolor non, soluta officiis. Soluta.
-            </p>
-            <p class="text-muted mb-1 text-primary">
-              <i class="fas fa-user-tie text-primary"></i>
-              <strong class="text-primary">Valaire</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="vr vr-blurry position-relative my-3 h-600"></div>
-    <div class="col">
-      <div class="col-lg-12 mb-5">
-        <div class="d-flex align-items-start">
-          <div class="flex-shrink-0">
-            <div class="p-3 badge-primary rounded-4">
-              <i class="fas fa-database fa-lg text-primary fa-fw"></i>
-            </div>
-          </div>
-          <div class="flex-grow-1 ms-4">
-            <h2 class="fw-bold mb-1">DATABASE</h2>
-            <p class="text-muted mb-1 text-justify">
-              <i class="fas fa-comments"></i>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Praesentium aspernatur explicabo inventore. Sunt maxime eveniet
-              voluptas quidem, totam nesciunt praesentium earum, nisi quibusdam
-              tempora corporis dolor non, soluta officiis. Soluta.
-            </p>
-            <p class="text-muted mb-1">
-              <i class="fas fa-user-tie text-primary"></i>
-              <strong class="text-primary">Sergio</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="vr vr-blurry position-relative my-5 h-600"></div>
-    <div class="col">
-      <div class="col-lg-12 mb-5">
-        <div class="d-flex align-items-start">
-          <div class="flex-shrink-0">
-            <div class="p-3 badge-primary rounded-4">
-              <i class="fas fa-brain fa-lg text-primary fa-fw"></i>
-            </div>
-          </div>
-          <div class="flex-grow-1 ms-4">
-            <h2 class="fw-bold mb-1">MODELING</h2>
-            <p class="text-muted mb-1 text-justify">
-              <i class="fas fa-comments"></i>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Praesentium aspernatur explicabo inventore. Sunt maxime eveniet
-              voluptas quidem, totam nesciunt praesentium earum, nisi quibusdam
-              tempora corporis dolor non, soluta officiis. Soluta.
-            </p>
-            <p class="text-muted mb-1 text-primary">
-              <i class="fas fa-user-tie text-primary"></i>
-              <strong class="text-primary">Elvis</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="vr vr-blurry position-relative my-5 h-600"></div>
-    <div class="col">
-      <div class="col-lg-12 mb-5">
-        <div class="d-flex align-items-start">
-          <div class="flex-shrink-0">
-            <div class="p-3 badge-primary rounded-4">
-              <i class="fas fa-square-share-nodes fa-lg text-primary fa-fw"></i>
-            </div>
-          </div>
-          <div class="flex-grow-1 ms-4">
-            <h2 class="fw-bold mb-1">SHARING</h2>
-            <p class="text-muted mb-1 text-justify">
-              <i class="fas fa-comments"></i>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Praesentium aspernatur explicabo inventore. Sunt maxime eveniet
-              voluptas quidem, totam nesciunt praesentium earum, nisi quibusdam
-              tempora corporis dolor non, soluta officiis. Soluta.
-            </p>
-            <p class="text-muted mb-1 text-primary">
-              <i class="fas fa-user-tie text-primary"></i>
-              <strong class="text-primary">Vanessa</strong>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="vr vr-blurry position-relative my-5 h-600"></div>
-  </div>
-</section>
-<!--Section: about-->
-</div>
-  </div>
-
-  <div class="d-flex align-items-center">
-    <hr class="flex-grow-1 border border-secondary" />
-    <span
-      class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
-    >
-      <h1>PARTNERS</h1></span
-    >
-    <hr class="flex-grow-1 border border-secondary" />
-  </div>
-
-  <!--Partners-->
-  <div class="partners-div mt-0 pb-5 shadow-0-strong">
-    <div class="container"><section>
-  <strong>
-    <h1 class="text-center text-black pt-5 mb-3"></h1>
-  </strong>
-
-  <div class="container mt-3">
-    <div
-      id="multiItemCarousel"
-      class="carousel slide carousel-dark text-center"
-      data-mdb-ride="carousel"
-    >
-      <!-- Inner -->
-      <div class="carousel-inner py-4">
-        <!-- First slide -->
-        <div class="carousel-item active">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/161.jpg"
-                  class="card-img-top rounded-9"
-                  width="100"
-                  height="auto"
-                  alt="..."
-                />
-              </div>
-              <div class="col-lg-3 d-none d-lg-block">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/162.jpg"
-                  class="card-img-top rounded-9"
-                  alt="..."
-                />
-              </div>
-              <div class="col-lg-3 d-none d-lg-block">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/160.jpg"
-                  class="card-img-top rounded-9"
-                  alt="..."
-                />
-              </div>
-              <div class="col-lg-3 d-none d-lg-block">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/163.jpg"
-                  class="card-img-top rounded-9"
-                  alt="..."
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Second slide -->
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/171.jpg"
-                  class="card-img-top rounded-5"
-                  alt="..."
-                />
-              </div>
-              <div class="col-lg-3 d-none d-lg-block">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/172.jpg"
-                  class="card-img-top rounded-5"
-                  alt="..."
-                />
-              </div>
-              <div class="col-lg-3 d-none d-lg-block">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/170.jpg"
-                  class="card-img-top rounded-5"
-                  alt="..."
-                />
-              </div>
-              <div class="col-lg-3 d-none d-lg-block">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/173.jpg"
-                  class="card-img-top rounded-5"
-                  alt="..."
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Third slide -->
-        <div class="carousel-item">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-3">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/181.jpg"
-                  class="card-img-top rounded-5"
-                  alt="..."
-                />
-              </div>
-              <div class="col-lg-3 d-none d-lg-block">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/182.jpg"
-                  class="card-img-top rounded-5"
-                  alt="..."
-                />
-              </div>
-              <div class="col-lg-3 d-none d-lg-block">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/180.jpg"
-                  class="card-img-top rounded-5"
-                  alt="..."
-                />
-              </div>
-              <div class="col-lg-3 d-none d-lg-block">
-                <img
-                  src="https://mdbootstrap.com/img/new/standard/nature/183.jpg"
-                  class="card-img-top rounded-5"
-                  alt="..."
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Controls -->
-      <button
-        class="carousel-control-prev"
-        type="button"
-        data-mdb-target="#multiItemCarousel"
-        data-mdb-slide="prev"
-      ></button>
-      <button
-        class="carousel-control-next"
-        type="button"
-        data-mdb-target="#multiItemCarousel"
-        data-mdb-slide="next"
-      ></button>
-    </div>
-  </div>
-</section>
-<!--Section: Content-->
-</div>
-  </div>
-
-  <div class="div-partners-blogs d-flex align-items-center">
-    <hr class="flex-grow-1 border border-secondary" />
-    <span
-      class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
-    >
-      <h1>BLOGS</h1></span
-    >
-    <hr class="flex-grow-1 border border-secondary" />
-  </div>
-
-  <!--blogs us-->
-  <div class="blogs-div mt-0 shadow-0-strong">
-    <div class="container"><!--Section: Content-->
-<section>
-  <strong>
-    <h1 class="text-center text-black pt-5 mb-3"></h1>
-  </strong>
-
-  <div class="row">
-    <div class="col-lg-4 col-md-12 mb-4">
-      <div class="card">
-        <div
-          class="bg-image hover-overlay"
-          data-mdb-ripple-init
-          data-mdb-ripple-color="light"
-        >
+  <body>
+    <div class="content">
+      <div class="container profile-container">
+        <!-- Profile Image in Background -->
+        <div class="profile-image">
           <img
             src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
-            class="img-fluid"
+            alt="Profile Picture"
           />
-          <a href="#!">
-            <div
-              class="mask"
-              style="background-color: rgba(251, 251, 251, 0.15)"
-            ></div>
-          </a>
         </div>
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+
+        <!-- Overlapping Text Card -->
+        <div class="profile-card">
+          <h4>Anna Doe</h4>
+          <p><strong>Graphic Designer</strong></p>
+          <p>
+            Nunc tincidunt vulputate elit. Mauris varius purus malesuada neque
+            iaculis malesuada. Aenean gravida magna orci, non efficitur est
+            porta id.
           </p>
-          <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card">
-        <div
-          class="bg-image hover-overlay"
-          data-mdb-ripple-init
-          data-mdb-ripple-color="light"
-        >
-          <img
-            src="https://mdbootstrap.com/img/new/standard/nature/023.jpg"
-            class="img-fluid"
-          />
-          <a href="#!">
-            <div
-              class="mask"
-              style="background-color: rgba(251, 251, 251, 0.15)"
-            ></div>
-          </a>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
+          <p>
+            Ad, at blanditiis quaerat laboriosam officia incidunt cupiditate
+            dignissimos voluptates eius aliquid minus praesentium!
           </p>
-          <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
+          <!-- Star Ratings -->
+          <div class="stars">★★★★★</div>
         </div>
       </div>
     </div>
 
-    <div class="col-lg-4 col-md-6 mb-4">
-      <div class="card">
-        <div
-          class="bg-image hover-overlay"
-          data-mdb-ripple-init
-          data-mdb-ripple-color="light"
-        >
-          <img
-            src="https://mdbootstrap.com/img/new/standard/nature/111.jpg"
-            class="img-fluid"
-          />
-          <a href="#!">
-            <div
-              class="mask"
-              style="background-color: rgba(251, 251, 251, 0.15)"
-            ></div>
-          </a>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
-          <a href="#!" class="btn btn-primary" data-mdb-ripple-init>Button</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="text-center">
-    <a href="#!" class="btn btn-primary mb-5" data-mdb-ripple-init>More...</a>
-  </div>
-</section>
-<!--Section: Content-->
-</div>
-  </div>
+    <!-- Sticky Footer -->
+    <footer class="footer">© 2025 Your Website | All Rights Reserved</footer>
 
-  <div class="div-blogs d-flex align-items-center">
-    <hr class="flex-grow-1 border border-secondary" />
-    <span
-      class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
-    >
-      <h1>CONTACT US</h1></span
-    >
-    <hr class="flex-grow-1 border border-secondary" />
-  </div>
-
-  <!--contact us-->
-  <div class="contact-div mt-0 pb-5 shadow-0-strong">
-    <div class="container"><!--Section: Content-->
-<section>
-  <strong>
-    <h1 class="text-center text-black pt-5 mb-3"></h1>
-  </strong>
-
-  <div class="row bg-white rounded-5 border opacity-90 shadow">
-    <div class="col-md-6 pt-4">
-      <div class="row d-flex justify-content-center">
-        <div class="col-md-12">
-          <form class="needs-validation" novalidate>
-            <!-- 2 column grid layout with text inputs for the first and last names -->
-            <div class="row mb-4">
-              <div class="col">
-                <div class="form-outline" data-mdb-input-init>
-                  <input
-                    type="text"
-                    id="form3Example1"
-                    class="form-control"
-                    required
-                  />
-                  <label class="form-label" for="form3Example1"
-                    >First name</label
-                  >
-                  <div class="valid-feedback">Looks good!</div>
-                  <div class="invalid-feedback">Provide your firstname.</div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="form-outline" data-mdb-input-init>
-                  <input
-                    type="text"
-                    id="form3Example2"
-                    class="form-control"
-                    required
-                  />
-                  <label class="form-label" for="form3Example2"
-                    >Last name</label
-                  >
-                  <div class="valid-feedback">Looks good!</div>
-                  <div class="invalid-feedback">Provide your lastname.</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Email input -->
-            <div class="form-outline mb-4" data-mdb-input-init>
-              <input
-                type="email"
-                id="form3Example3"
-                class="form-control"
-                required
-              />
-              <label class="form-label" for="form3Example3"
-                >Email address</label
-              >
-              <div class="invalid-feedback">
-                Please provide a valid email address.
-              </div>
-              <div class="valid-feedback">Looks good!</div>
-            </div>
-
-            <!-- Message content input -->
-            <div class="form-outline mb-4" data-mdb-input-init>
-              <textarea
-                type="textarea"
-                id="form3Example4"
-                class="form-control"
-                required
-              ></textarea>
-              <label class="form-label" for="form3Example4"
-                >Enter your message here</label
-              >
-              <div class="invalid-feedback">
-                Please provide at list one word.
-              </div>
-              <div class="valid-feedback">Looks good!</div>
-            </div>
-
-            <div class="col-md-3 text-center">
-              <!-- Submit button -->
-              <button
-                type="submit"
-                class="btn btn-primary btn-block mb-4"
-                data-mdb-ripple-init
-              >
-                Send
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-
-    <div class="vr vr-blurry mx-5 mb-0"></div>
-
-    <div class="col-md-4 pt-4">
-      <div class="row">
-        <div class="col-lg-12 mb-5">
-          <div class="d-flex align-items-start">
-            <div class="flex-shrink-0">
-              <div class="p-3 badge-primary rounded-4">
-                <i class="fas fa-circle-info fa-lg text-primary fa-fw"></i>
-              </div>
-            </div>
-            <div class="flex-grow-1 ms-4">
-              <p class="fw-bold mb-1">Info Service</p>
-              <p class="text-muted mb-1">
-                <i class="fas fa-at"></i> info@dataforknow.com
-              </p>
-              <p class="text-muted mb-1">
-                <i class="fas fa-phone"></i> +1 (999) 985-8888
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12 mb-5">
-          <div class="d-flex align-items-start">
-            <div class="flex-shrink-0">
-              <div class="p-3 badge-primary rounded-4">
-                <i class="fas fa-users fa-lg text-primary fa-fw"></i>
-              </div>
-            </div>
-            <div class="flex-grow-1 ms-4">
-              <p class="fw-bold mb-1">Contact HR office</p>
-              <p class="text-muted mb-1">
-                <i class="fas fa-at"></i> hr@dataforknow.com
-              </p>
-              <p class="text-muted mb-1">
-                <i class="fas fa-phone"></i> +1 (999) 985-8888
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!--Section: Content-->
-</div>
-  </div>
-
-  <!--Main layout-->
-
-  <!-- MDB JS script-->
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.es.min.js"
-    integrity="sha512-BeqBR1tSs66TKfRbufAK3jbKyG2ysd45VAiL+/2QFMEhlJ6JAvzvl6RVTiUh2yi/cVseSrGOgc+QvIUbTubDFQ=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.umd.min.js"
-    integrity="sha512-Dz2rUPE4WINN15fNibH3zUk9Inj1dje/JX4yXVY5vVkyvLNYEYFv2PQVi2+UeY44UmdTLS1dYo/Lm09rIAoQlw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
-
-  <!-- d4k custum script-->
-  <script src="../www/d4k_script.js"></script>
-  <script src="../www/d4k_handlers.js"></script>
-</body>
-
-<div class="div-contact-follow d-flex align-items-center">
-  <hr class="flex-grow-1 border border-black" />
-  <span
-    class="my-5 mx-0 px-5 py-3 text-black border border-black rounded-9 shadow-5-strong"
-  >
-    <h4>follow us</h4></span
-  >
-  <hr class="flex-grow-1 border border-black" />
-</div>
-
-<!--Footer-->
-<footer class="bg-light text-lg-start">
-  <div class=" social-media-div text-center py-3 align-items-center" >
-    <a href="https://www.youtube.com/channel/UC5CF7mLQZhvx8O5GODZAhdA" 
-    class="btn btn-primary btn-floating mx-5 p-5" 
-    role="button" data-mdb-ripple-init
-    rel="nofollow" target="_blank">
-      <i class="fab fa-youtube fa-2xl"></i>
-    </a>
-    <a href="https://www.facebook.com/mdbootstrap" 
-    class="btn btn-primary btn-floating mx-5 p-5" 
-    role="button" rel="nofollow" data-mdb-ripple-init
-    target="_blank">
-      <i class="fab fa-facebook-f fa-2xl"></i>
-    </a>
-    <a href="https://twitter.com/MDBootstrap" 
-    class="btn btn-primary btn-floating mx-5 p-5" 
-    role="button" rel="nofollow" data-mdb-ripple-init
-    target="_blank">
-      <i class="fab fa-twitter fa-2xl"></i>
-    </a>
-    <a href="https://github.com/mdbootstrap/mdb-ui-kit" 
-    class="btn btn-primary btn-floating mx-5 p-5" 
-    role="button" rel="nofollow" data-mdb-ripple-init
-    target="_blank">
-      <i class="fab fa-github fa-2xl"></i>
-    </a>
-  </div>
-
-  <!-- Copyright -->
-  <div class="copyright-div text-center p-3">
-    <h3>© 2025 Copyright, <a class="text-dark" href="https://dataforknow.com/">D4Know.com</a></h3>
-    
-  </div>
-  <!-- Copyright -->
-</footer>
-<!--Footer-->
+    <!-- MDB Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.0.0/mdb.min.js"></script>
+  </body>
 </html>

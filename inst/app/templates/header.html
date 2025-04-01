@@ -17,10 +17,14 @@
   />
   <!-- MDB -->
   <link
+    href="https://cdn.jsdelivr.net/npm/mdb-ui-kit@8.2.0/css/mdb.min.css"
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.min.css"
-    integrity="sha512-viZnJCMu1IKCniSdlMH+5f8c7mOlAjqg53E3ycTycIGTk+20PCDuszNiWMYZ+g2Vwzu40Qp5JDPjpB+NHT0Jzw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
   />
+  <script>
+    window.onload = function () {
+      setTimeout(function () {
+        location.reload("smooth"); // Refresh the page after a delay
+      }, 3); // 3000 milliseconds = 3 seconds
+    };
+  </script>
 </head>

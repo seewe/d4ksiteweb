@@ -1,26 +1,42 @@
 <!--Footer-->
-<footer class="bg-light text-lg-start">
-  <div class="social-media-div text-center py-3 align-items-center">
-    {% for key, socmed in data_template.social_media_data %}
-    <a
-      href="{{socmed.linked_page}}"
-      class="btn btn-{{socmed.btn_cls}} btn-floating mx-4 p-4 {{socmed.pulse_clas}}"
-      role="button"
-      data-mdb-ripple-init
-      rel="nofollow"
-      target="_blank"
-    >
-      <i class="fab fa-{{socmed.icon}} fa-2xl text-{{socmed.txt_cls}}"></i>
-    </a>
-    {%endfor%}
+<footer>
+  <div
+    class="d-flex flex-column social-media-div text-center py-3 align-items-center"
+  >
+    <div class="pb-3">
+      {% for key, socmed in data_template.social_media_data %}
+      <a
+        href="{{socmed.linked_page}}"
+        class="btn btn-{{socmed.btn_cls}} btn-floating mx-4 p-4 {{socmed.pulse_clas}}"
+        role="button"
+        data-mdb-ripple-init
+        rel="nofollow"
+        target="_blank"
+      >
+        <i class="fab fa-{{socmed.icon}} fa-2xl text-{{socmed.txt_cls}}"></i>
+      </a>
+      {%endfor%}
+    </div>
+    <div class="p-1 rounded-5 shadow-5-strong bg-transparent">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.4120125614695!2d-71.20131892328651!3d46.89461493687148!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8bc6825647999%3A0x17c317548f0ed9a!2sAv.%20Simon-Bolivar%2C%20Qu%C3%A9bec%2C%20QC!5e0!3m2!1sfr!2sca!4v1742437332879!5m2!1sfr!2sca"
+        width="500"
+        height="200"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="rounded-5"
+      ></iframe>
+    </div>
   </div>
-
   <!-- Copyright -->
-  <div class="copyright-div text-center p-3">
-    <h3>
+  <div class="copyright-div text-center p-1">
+    <h4>
       © 2025 Copyright,
-      <a class="text-dark" href="https://dataforknow.com/">D4Know.com</a>
-    </h3>
+      <a class="text-dark" href="https://dataforknow.com/">D4Know.com,</a>
+      NEQ : 2279172102
+    </h4>
   </div>
   <!-- Copyright -->
 </footer>

@@ -7,7 +7,12 @@ Description: The website of Data For Know start up.
 License: MIT + file LICENSE
 Imports: 
     config,
+    dplyr,
+    emayili,
     golem,
+    htmltools,
+    jinjar,
+    leaflet,
     shiny
 Suggests: 
     spelling,

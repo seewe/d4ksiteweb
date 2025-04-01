@@ -10,7 +10,7 @@
 
     <!--Main layout-->
 
-    <div class="div-band-about d-flex align-items-center">
+    <div id="about" class="div-band-about d-flex align-items-center">
       <hr class="flex-grow-1 border border-secondary" />
       <span
         class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
@@ -40,7 +40,7 @@
       <div class="container">{% include "partners.html" %}</div>
     </div>
 
-    <div class="div-partners-blogs d-flex align-items-center">
+    <div id="blogs" class="div-partners-blogs d-flex align-items-center">
       <hr class="flex-grow-1 border border-secondary" />
       <span
         class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
@@ -55,7 +55,7 @@
       <div class="container">{% include "blogs.html" %}</div>
     </div>
 
-    <div class="div-blogs d-flex align-items-center">
+    <div id="contact" class="div-blogs d-flex align-items-center">
       <hr class="flex-grow-1 border border-secondary" />
       <span
         class="my-5 mx-0 px-5 py-3 text-black border border-secondary rounded-9 shadow-5-strong"
@@ -72,34 +72,20 @@
 
     <!--Main layout-->
 
+    <div class="div-contact-follow d-flex align-items-center">
+      <hr class="flex-grow-1 border border-black" />
+      <span
+        class="my-5 mx-0 px-5 py-3 text-black border border-black rounded-9 shadow-5-strong"
+      >
+        <h4>follow us</h4></span
+      >
+      <hr class="flex-grow-1 border border-black" />
+    </div>
+
+    <!--footer-->
+    {% include "footer.html" %}
+
     <!-- MDB JS script-->
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.es.min.js"
-      integrity="sha512-BeqBR1tSs66TKfRbufAK3jbKyG2ysd45VAiL+/2QFMEhlJ6JAvzvl6RVTiUh2yi/cVseSrGOgc+QvIUbTubDFQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/8.1.0/mdb.umd.min.js"
-      integrity="sha512-Dz2rUPE4WINN15fNibH3zUk9Inj1dje/JX4yXVY5vVkyvLNYEYFv2PQVi2+UeY44UmdTLS1dYo/Lm09rIAoQlw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <!-- d4k custum script-->
-    <script src="../www/d4k_script.js"></script>
-    <script src="../www/d4k_handlers.js"></script>
+    {% include "scripts.html" %}
   </body>
-
-  <div class="div-contact-follow d-flex align-items-center">
-    <hr class="flex-grow-1 border border-black" />
-    <span
-      class="my-5 mx-0 px-5 py-3 text-black border border-black rounded-9 shadow-5-strong"
-    >
-      <h4>follow us</h4></span
-    >
-    <hr class="flex-grow-1 border border-black" />
-  </div>
-
-  {% include "footer.html" %}
 </html>

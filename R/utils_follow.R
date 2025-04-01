@@ -17,20 +17,20 @@ social_media_data <- list(
     linked_page = "!#",
     btn_cls = "primary",
     txt_cls = "white",
-    pulse_clas = "socmeddg"
+    pulse_clas = "socmed"
   ),
   socmed3 = list(
     icon = "twitter",
     linked_page = "!#",
     btn_cls = "light",
     txt_cls = "info",
-    pulse_clas = "socmedlg"
+    pulse_clas = "socmedtw"
   ),
   socmed4 = list(
     icon = "github",
     linked_page = "https://github.com/seewe/d4ksiteweb",
     btn_cls = "light",
     txt_cls = "dark",
-    pulse_clas = "socmedlg"
+    pulse_clas = "socmedgh"
   )
 )

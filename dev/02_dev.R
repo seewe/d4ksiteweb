@@ -29,7 +29,8 @@ attachment::create_renv_for_dev(
     "dockerfiler",
     "golem",
     "testthat",
-    "emayili"
+    "emayili",
+    "shiny.router"
   )
 )
 
@@ -44,6 +45,8 @@ golem::add_module(name = "home", with_test = FALSE) # Name of the module
 golem::add_module(name = "aboutus", with_test = FALSE) # Name of the module
 golem::add_module(name = "blogs", with_test = FALSE) # Name of the module
 golem::add_module(name = "contact", with_test = FALSE) # Name of the module
+golem::add_module(name = "developer", with_test = FALSE) # Name of the module
+golem::add_module(name = "storage", with_test = FALSE) # Name of the module
 
 ## Add helper functions ----
 ## Creates fct_* and utils_*
@@ -55,6 +58,8 @@ golem::add_utils("partners", with_test = FALSE)
 golem::add_utils("blogs", with_test = FALSE)
 golem::add_utils("contact", with_test = FALSE)
 golem::add_utils("follow", with_test = FALSE)
+golem::add_utils("developer", with_test = FALSE)
+golem::add_utils("storage", with_test = FALSE)
 
 ## External resources
 ## Creates .js and .css files at inst/app/www

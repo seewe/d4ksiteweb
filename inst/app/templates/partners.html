@@ -5,9 +5,11 @@
 
   <div class="container mt-3">
     <div
-      id="multiItemCarousel"
-      class="carousel slide carousel-dark text-center"
+      id="{{data_template.partners_carousel_id}}"
+      class="carousel slide carousel-fade text-center"
       data-mdb-ride="carousel"
+      data-mdb-wrap="true"
+      data-mdb-carousel-init
     >
       <!-- Inner -->
       <div class="carousel-inner py-4">
@@ -37,13 +39,13 @@
       <button
         class="carousel-control-prev"
         type="button"
-        data-mdb-target="#multiItemCarousel"
+        data-mdb-target="#{{data_template.partners_carousel_id}}"
         data-mdb-slide="prev"
       ></button>
       <button
         class="carousel-control-next"
         type="button"
-        data-mdb-target="#multiItemCarousel"
+        data-mdb-target="#{{data_template.partners_carousel_id}}"
         data-mdb-slide="next"
       ></button>
     </div>

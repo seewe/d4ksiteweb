@@ -1,5 +1,4 @@
 $( document ).ready(function() {
-
 });
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -47,3 +46,39 @@ document.getElementById("messageID").addEventListener("input", function() {
   document.getElementById("charCount").textContent = document.getElementById("messageID").value.length;
 });
 
+function openHomePage(event) {
+  event.preventDefault();
+  window.scrollTo(0, 0, "smooth"); // Forces the page to load at the top
+}
+
+function scrollToHomeSection(event) {
+  var element = document.getElementById("introCarousel");
+  window.scrollTo({
+      top: element.offsetTop,   // Scroll to the position of the element
+      behavior: "smooth"        // Optional: smooth scroll
+  });
+};
+
+function scrollToAboutSection(event) {
+  var element = document.getElementById("about");
+  window.scrollTo({
+      top: element.offsetTop,   // Scroll to the position of the element
+      behavior: "smooth"        // Optional: smooth scroll
+  });
+};
+
+function scrollToBlogsSection(event) {
+  var element = document.getElementById("blogs");
+  window.scrollTo({
+      top: element.offsetTop,   // Scroll to the position of the element
+      behavior: "smooth"        // Optional: smooth scroll
+  });
+};
+
+function scrollToContactSection(event) {
+  var element = document.getElementById("contact");
+  window.scrollTo({
+      top: element.offsetTop,   // Scroll to the position of the element
+      behavior: "smooth"        // Optional: smooth scroll
+  });
+};

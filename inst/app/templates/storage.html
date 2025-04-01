@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include "header.html" %}
+
+  <body>
+    <!--Navbar-->
+    {% include "navbar.html" %}
+    <!--Developer profil-->
+    <div class="profil-div mt-0 pb-0 shadow-0-strong">
+      {% include "profil.html" %}
+    </div>
+    <!--competencies-->
+    <div class="competency-div mt-0 pb-0 shadow-0-strong">
+      {% include "partners.html" %}
+    </div>
+
+    <div class="div-contact-follow-profil d-flex align-items-center">
+      <hr class="flex-grow-1 border border-black" />
+      <span
+        class="my-5 mx-0 px-5 py-3 text-black border border-black rounded-9 shadow-5-strong"
+      >
+        <h4>follow us</h4></span
+      >
+      <hr class="flex-grow-1 border border-black" />
+    </div>
+
+    <!-- MDB JS script-->
+    {% include "scripts.html" %}
+  </body>
+  <!--footer-->
+  {% include "footerLight.html" %}
+</html>

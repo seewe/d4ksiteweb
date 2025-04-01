@@ -1,4 +1,4 @@
-#' home UI Function
+#' developer UI Function
 #'
 #' @description A shiny Module.
 #'
@@ -7,32 +7,36 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_home_ui <- function(id) {
+mod_developer_ui <- function(id) {
   ns <- shiny::NS(id)
   shiny::uiOutput(ns("html_content"))
 }
 
-#' home Server Functions
+#' developer Server Functions
 #'
 #' @noRd
-mod_home_server <- function(input, output, session) {
+mod_developer_server <- function(input, output, session) {
   ns <- session$ns
+
+  navbar_menu_data <- list(
+    Home = list(link = "#!/", onclick = "scrollToHomeSection")
+  )
 
   page_data <- list(
     navbar_menu_data = navbar_menu_data,
     navbar_icon_data = navbar_icon_data,
     brand_carousel = brand_carousel,
     about_skills = about_skills,
-    partners_data = partners_data,
+    partners_data = developer_data,
     blogs_data = blogs_data,
     contact_list = contact_list,
     social_media_data = social_media_data,
-    partners_carousel_id = partners_carousel_id
+    partners_carousel_id = developer_carousel_id
   )
 
   output$html_content <- shiny::renderUI({
     html_content <- render_jinja_template(
-      "main_page.html",
+      "developer.html",
       data = page_data
     )
     # cat(html_content)
@@ -41,7 +45,7 @@ mod_home_server <- function(input, output, session) {
 }
 
 ## To be copied in the UI
-# callModule(mod_home_ui, "home_1")
+# callModule(mod_developer_ui, "developer_1")
 
 ## To be copied in the server
-# callModule(mod_home_server, "home_1")
+# callModule(mod_developer_server, "developer_1")
