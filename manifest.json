@@ -101,10 +101,9 @@
       "description": {
         "Package": "Rcpp",
         "Title": "Seamless R and C++ Integration",
-        "Version": "1.0.13",
-        "Date": "2024-07-11",
-        "Author": "Dirk Eddelbuettel, Romain Francois, JJ Allaire, Kevin Ushey, Qiang Kou,\n Nathan Russell, Inaki Ucar, Douglas Bates and John Chambers",
-        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+        "Version": "1.0.14",
+        "Date": "2025-01-11",
+        "Authors@R": "c(person(\"Dirk\", \"Eddelbuettel\", role = c(\"aut\", \"cre\"), email = \"edd@debian.org\",\n                    comment = c(ORCID = \"0000-0001-6419-907X\")),\n             person(\"Romain\", \"Francois\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0002-2444-4226\")),\n             person(\"JJ\", \"Allaire\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0003-0174-9868\")),\n             person(\"Kevin\", \"Ushey\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0003-2880-7407\")),\n             person(\"Qiang\", \"Kou\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0001-6786-5453\")),\n             person(\"Nathan\", \"Russell\", role = \"aut\"),\n             person(\"Iñaki\", \"Ucar\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0001-6403-5550\")),\n             person(\"Doug\", \"Bates\", role = \"aut\",\n                    comment = c(ORCID = \"0000-0001-8316-9503\")),\n             person(\"John\", \"Chambers\", role = \"aut\"))",
         "Description": "The 'Rcpp' package provides R functions as well as C++ classes which\n offer a seamless integration of R and C++. Many R data types and objects can be\n mapped back and forth to C++ equivalents which facilitates both writing of new\n code as well as easier integration of third-party libraries. Documentation\n about 'Rcpp' is provided by several vignettes included in this package, via the\n 'Rcpp Gallery' site at <https://gallery.rcpp.org>, the paper by Eddelbuettel and\n Francois (2011, <doi:10.18637/jss.v040.i08>), the book by Eddelbuettel (2013,\n <doi:10.1007/978-1-4614-6868-4>) and the paper by Eddelbuettel and Balamuta (2018,\n <doi:10.1080/00031305.2017.1375990>); see 'citation(\"Rcpp\")' for details.",
         "Imports": "methods, utils",
         "Suggests": "tinytest, inline, rbenchmark, pkgKitten (>= 0.1.2)",
@@ -115,18 +114,20 @@
         "RoxygenNote": "6.1.1",
         "Encoding": "UTF-8",
         "NeedsCompilation": "yes",
-        "Packaged": "2024-07-11 13:00:10 UTC; edd",
-        "Repository": "RSPM",
-        "Date/Publication": "2024-07-17 15:50:06 UTC",
-        "Built": "R 4.4.0; x86_64-w64-mingw32; 2024-07-18 04:28:04 UTC; windows",
+        "Packaged": "2025-01-11 20:21:25 UTC; edd",
+        "Author": "Dirk Eddelbuettel [aut, cre] (<https://orcid.org/0000-0001-6419-907X>),\n  Romain Francois [aut] (<https://orcid.org/0000-0002-2444-4226>),\n  JJ Allaire [aut] (<https://orcid.org/0000-0003-0174-9868>),\n  Kevin Ushey [aut] (<https://orcid.org/0000-0003-2880-7407>),\n  Qiang Kou [aut] (<https://orcid.org/0000-0001-6786-5453>),\n  Nathan Russell [aut],\n  Iñaki Ucar [aut] (<https://orcid.org/0000-0001-6403-5550>),\n  Doug Bates [aut] (<https://orcid.org/0000-0001-8316-9503>),\n  John Chambers [aut]",
+        "Maintainer": "Dirk Eddelbuettel <edd@debian.org>",
+        "Repository": "CRAN",
+        "Date/Publication": "2025-01-12 16:10:02 UTC",
+        "Built": "R 4.4.3; x86_64-w64-mingw32; 2025-03-31 00:36:37 UTC; windows",
         "Archs": "x64",
         "RemoteType": "standard",
         "RemotePkgRef": "Rcpp",
         "RemoteRef": "Rcpp",
-        "RemoteRepos": "https://packagemanager.posit.co/cran/latest",
+        "RemoteRepos": "https://cran.rstudio.com",
         "RemoteReposName": "CRAN",
         "RemotePkgPlatform": "x86_64-w64-mingw32",
-        "RemoteSha": "1.0.13"
+        "RemoteSha": "1.0.14"
       }
     },
     "askpass": {
@@ -962,34 +963,6 @@
         "RemoteReposName": "CRAN",
         "RemotePkgPlatform": "x86_64-w64-mingw32",
         "RemoteSha": "0.6.37"
-      }
-    },
-    "dockerfiler": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "dockerfiler",
-        "Title": "Easy Dockerfile Creation from R",
-        "Version": "0.2.4",
-        "Authors@R": "c(\n    person(\"Colin\", \"Fay\", , \"contact@colinfay.me\", role = c(\"cre\", \"aut\"),\n           comment = c(ORCID = \"0000-0001-7343-1846\")),\n    person(\"Vincent\", \"Guyader\", , \"vincent@thinkr.fr\", role = \"aut\",\n           comment = c(ORCID = \"0000-0003-0671-9270\")),\n    person(\"Josiah\", \"Parry\", , \"josiah.parry@gmail.com\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-9910-865X\")),\n    person(\"Sébastien\", \"Rochette\", , \"sebastien@thinkr.fr\", role = \"aut\",\n           comment = c(ORCID = \"0000-0002-1565-9313\"))\n  )",
-        "Description": "Build a Dockerfile straight from your R session.\n    'dockerfiler' allows you to create step by step a Dockerfile, and\n    provide convenient tools to wrap R code inside this Dockerfile.",
-        "License": "MIT + file LICENSE",
-        "URL": "https://github.com/ThinkR-open/dockerfiler",
-        "BugReports": "https://github.com/ThinkR-open/dockerfiler/issues",
-        "Imports": "attempt (>= 0.3.1), cli (>= 2.3.0), desc (>= 1.2.0), fs (>=\n1.5.0), glue (>= 1.4.2), jsonlite (>= 1.7.2), memoise, pak (>=\n0.6.0), pkgbuild (>= 1.2.0), purrr, R6 (>= 2.5.0), remotes (>=\n2.2.0), usethis (>= 2.0.1), utils",
-        "Suggests": "knitr (>= 1.31), rmarkdown (>= 2.6), testthat (>= 3.0.0),\nwithr",
-        "VignetteBuilder": "knitr",
-        "Config/fusen/version": "0.6.0",
-        "Config/testthat/edition": "3",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.3.2",
-        "NeedsCompilation": "no",
-        "Packaged": "2024-08-23 09:46:43 UTC; colinfay",
-        "Author": "Colin Fay [cre, aut] (<https://orcid.org/0000-0001-7343-1846>),\n  Vincent Guyader [aut] (<https://orcid.org/0000-0003-0671-9270>),\n  Josiah Parry [aut] (<https://orcid.org/0000-0001-9910-865X>),\n  Sébastien Rochette [aut] (<https://orcid.org/0000-0002-1565-9313>)",
-        "Maintainer": "Colin Fay <contact@colinfay.me>",
-        "Repository": "CRAN",
-        "Date/Publication": "2024-08-23 10:00:09 UTC",
-        "Built": "R 4.4.3; ; 2025-03-22 04:06:05 UTC; windows"
       }
     },
     "downlit": {
@@ -2509,39 +2482,6 @@
         "Repository": "CRAN",
         "Date/Publication": "2023-09-05 13:00:02 UTC",
         "Built": "R 4.4.3; ; 2025-03-22 02:37:20 UTC; windows"
-      }
-    },
-    "pak": {
-      "Source": "CRAN",
-      "Repository": "https://cran.rstudio.com",
-      "description": {
-        "Package": "pak",
-        "Title": "Another Approach to Package Installation",
-        "Version": "0.8.0.1",
-        "Authors@R": "c(\n    person(\"Gábor\", \"Csárdi\", , \"csardi.gabor@gmail.com\", role = c(\"aut\", \"cre\")),\n    person(\"Jim\", \"Hester\", role = \"aut\"),\n    person(\"Posit Software, PBC\", role = c(\"cph\", \"fnd\")),\n    person(\"Winston\", \"Chang\", role = \"ctb\", comment = \"R6, callr, processx\"),\n    person(\"Ascent Digital Services\", role = c(\"cph\", \"fnd\"), comment = \"callr, processx\"),\n    person(\"Hadley\", \"Wickham\", role = c(\"ctb\", \"cph\"), comment = \"cli, curl, pkgbuild\"),\n    person(\"Jeroen\", \"Ooms\", role = \"ctb\", comment = \"curl, jsonlite\"),\n    person(\"Maëlle\", \"Salmon\", role = \"ctb\", comment = \"desc, pkgsearch\"),\n    person(\"Duncan\", \"Temple Lang\", role = \"ctb\", comment = \"jsonlite\"),\n    person(\"Lloyd\", \"Hilaiel\", role = \"cph\", comment = \"jsonlite\"),\n    person(\"Michel Berkelaar and lpSolve authors\", role = \"ctb\", comment = \"lpSolve\"),\n    person(\"R Consortium\", role = \"fnd\", comment = \"pkgsearch\"),\n    person(\"Jay\", \"Loden\", role = \"ctb\", comment = \"ps\"),\n    person(\"Dave\", \"Daeschler\", role = \"ctb\", comment = \"ps\"),\n    person(\"Giampaolo\", \"Rodola\", role = \"ctb\", comment = \"ps\"),\n    person(\"Kuba\", \"Podgórski\", role = \"ctb\", comment = \"zip\"),\n    person(\"Rich\", \"Geldreich\", role = \"ctb\", comment = \"zip\")\n  )",
-        "Description": "The goal of 'pak' is to make package installation faster and\n    more reliable. In particular, it performs all HTTP operations in\n    parallel, so metadata resolution and package downloads are fast.\n    Metadata and package files are cached on the local disk as well. 'pak'\n    has a dependency solver, so it finds version conflicts before\n    performing the installation. This version of 'pak' supports CRAN,\n    'Bioconductor' and 'GitHub' packages as well.",
-        "License": "GPL-3",
-        "URL": "https://pak.r-lib.org/, https://github.com/r-lib/pak",
-        "BugReports": "https://github.com/r-lib/pak/issues",
-        "Depends": "R (>= 3.5)",
-        "Imports": "tools, utils",
-        "Suggests": "callr (>= 3.7.0), cli (>= 3.2.0), covr, curl (>= 4.3.2), desc\n(>= 1.4.1), filelock (>= 1.0.2), gitcreds, glue (>= 1.6.2),\njsonlite (>= 1.8.0), mockery, pingr, pkgbuild (>= 1.4.2),\npkgcache (>= 2.0.4), pkgdepends (>= 0.5.0.9001), pkgload,\npkgsearch (>= 3.1.0), processx (>= 3.8.1), ps (>= 1.6.0),\nrstudioapi, testthat (>= 3.2.0), withr",
-        "ByteCompile": "true",
-        "Config/build/extra-sources": "configure*",
-        "Config/needs/dependencies": "callr, desc, cli, curl, filelock, jsonlite,\ngaborcsardi/lpSolve, pkgbuild, r-lib/pkgcache,\nr-lib/pkgdepends, r-hub/pkgsearch, processx, ps,",
-        "Config/Needs/website": "r-lib/asciicast, rmarkdown, roxygen2,\ntidyverse/tidytemplate",
-        "Config/Needs/deploy": "cli@3.6.2, curl, desc, gitcreds, glue@1.6.2,\njsonlite, processx",
-        "Config/testthat/edition": "3",
-        "Encoding": "UTF-8",
-        "RoxygenNote": "7.3.2",
-        "Biarch": "true",
-        "NeedsCompilation": "yes",
-        "Packaged": "2025-01-16 19:08:08 UTC; gaborcsardi",
-        "Author": "Gábor Csárdi [aut, cre],\n  Jim Hester [aut],\n  Posit Software, PBC [cph, fnd],\n  Winston Chang [ctb] (R6, callr, processx),\n  Ascent Digital Services [cph, fnd] (callr, processx),\n  Hadley Wickham [ctb, cph] (cli, curl, pkgbuild),\n  Jeroen Ooms [ctb] (curl, jsonlite),\n  Maëlle Salmon [ctb] (desc, pkgsearch),\n  Duncan Temple Lang [ctb] (jsonlite),\n  Lloyd Hilaiel [cph] (jsonlite),\n  Michel Berkelaar and lpSolve authors [ctb] (lpSolve),\n  R Consortium [fnd] (pkgsearch),\n  Jay Loden [ctb] (ps),\n  Dave Daeschler [ctb] (ps),\n  Giampaolo Rodola [ctb] (ps),\n  Kuba Podgórski [ctb] (zip),\n  Rich Geldreich [ctb] (zip)",
-        "Maintainer": "Gábor Csárdi <csardi.gabor@gmail.com>",
-        "Repository": "CRAN",
-        "Date/Publication": "2025-01-16 19:50:02 UTC",
-        "Built": "R 4.4.3; x86_64-w64-mingw32; 2025-03-22 02:36:38 UTC; windows"
       }
     },
     "pillar": {
@@ -4875,7 +4815,7 @@
       "checksum": "5941f30237578dc74cfdfb5a819a505f"
     },
     ".Rprofile": {
-      "checksum": "12c8ec66cf29d70caddc1eee50b0bc16"
+      "checksum": "e446ce26df0c86c83fadf825a6954335"
     },
     "app.R": {
       "checksum": "548a7057401bb1496acadb35e92aad13"
@@ -5055,7 +4995,7 @@
       "checksum": "9f5cd13f75f59b0472612ad11e96bff7"
     },
     "renv.lock": {
-      "checksum": "725513e063ab6113e4d06a1c97352e07"
+      "checksum": "c0a6af61feddd5a5ce0d25c2984e76d2"
     }
   },
   "users": null

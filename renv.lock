@@ -42,14 +42,14 @@
     },
     "Rcpp": {
       "Package": "Rcpp",
-      "Version": "1.0.13",
+      "Version": "1.0.14",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "methods",
         "utils"
       ],
-      "Hash": "f27411eb6d9c3dada5edd444b8416675"
+      "Hash": "e7bdd9ee90e96921ca8a0f1972d66682"
     },
     "askpass": {
       "Package": "askpass",
@@ -369,29 +369,6 @@
         "utils"
       ],
       "Hash": "33698c4b3127fc9f506654607fb73676"
-    },
-    "dockerfiler": {
-      "Package": "dockerfiler",
-      "Version": "0.2.4",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R6",
-        "attempt",
-        "cli",
-        "desc",
-        "fs",
-        "glue",
-        "jsonlite",
-        "memoise",
-        "pak",
-        "pkgbuild",
-        "purrr",
-        "remotes",
-        "usethis",
-        "utils"
-      ],
-      "Hash": "3c6bea39fd53c0bb4ebc578ca3aba8ef"
     },
     "downlit": {
       "Package": "downlit",
@@ -972,18 +949,6 @@
         "utils"
       ],
       "Hash": "55ddd2d4a1959535f18393478b0c14a6"
-    },
-    "pak": {
-      "Package": "pak",
-      "Version": "0.8.0.1",
-      "Source": "Repository",
-      "Repository": "CRAN",
-      "Requirements": [
-        "R",
-        "tools",
-        "utils"
-      ],
-      "Hash": "7a5f3ae05388bfd4adfeb5d7fad1b8de"
     },
     "pillar": {
       "Package": "pillar",
