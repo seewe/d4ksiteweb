@@ -1,4 +1,4 @@
-Package: d4ksiteweb
+Package: dataforknow
 Title: Data For Know
 Version: 0.0.1
 Authors@R: 
@@ -13,6 +13,7 @@ Imports:
     htmltools,
     jinjar,
     leaflet,
+    pkgload,
     shiny
 Suggests: 
     spelling,

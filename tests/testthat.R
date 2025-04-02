@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/articles/special-files.html
 
 library(testthat)
-library(d4ksiteweb)
+library(dataforknow)
 
-test_check("d4ksiteweb")
+test_check("dataforknow")

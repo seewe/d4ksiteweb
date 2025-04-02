@@ -9,7 +9,7 @@
 #'
 #' @noRd
 app_sys <- function(...) {
-  system.file(..., package = "d4ksiteweb")
+  system.file(..., package = "dataforknow")
 }
 
 

@@ -19,7 +19,7 @@
 ## to change the name in the app_sys() function in app_config.R /!\
 ##
 golem::fill_desc(
-  pkg_name = "d4ksiteweb", # The name of the golem package containing the app (typically lowercase, no underscore or periods)
+  pkg_name = "dataforknow", # The name of the golem package containing the app (typically lowercase, no underscore or periods)
   pkg_title = "Data For Know", # What the Package Does (One Line, Title Case, No Period)
   pkg_description = "The website of Data For Know start up.", # What the package does (one paragraph).
   authors = person(
