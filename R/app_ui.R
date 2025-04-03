@@ -13,9 +13,9 @@ app_ui <- function(request) {
       shiny.router::route("/", mod_home_ui("home_1")),
       shiny.router::route("developer", mod_developer_ui("developer_1")),
       shiny.router::route("storage", mod_developer_ui("storage_1")),
-      shiny.router::route("modeler", htmltools::h1("modelers page")),
-      shiny.router::route("publisher", htmltools::h1("publisher page")),
-      shiny.router::route("moredocument", htmltools::h1("More blog documents"))
+      shiny.router::route("modeler", htmltools::p("modelers page")),
+      shiny.router::route("publisher", htmltools::p("publisher page")),
+      shiny.router::route("moredocument", htmltools::p("More blog documents"))
     )
   )
 }
@@ -26,7 +26,7 @@ app_ui <- function(request) {
 #' resources inside the Shiny application.
 #'
 #' @import shiny
-#' @importFrom golem add_resource_path activate_js favicon bundle_resources
+#' @importFrom golem add_resource_path favicon bundle_resources
 #' @noRd
 golem_add_external_resources <- function() {
   golem::add_resource_path("www", app_sys("app/www"))

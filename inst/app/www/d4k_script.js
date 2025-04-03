@@ -1,5 +1,26 @@
-$( document ).ready(function() {
-});
+if(document.getElementById("contactForm")){
+  // reset  the form
+  document.getElementById("contactForm").onreset = function (event) {
+    event.preventDefault(); // Prevent normal form submission
+    location.reload();
+  }
+}
+
+if(document.getElementById("messageID")){
+  // Text area count characters
+  document.getElementById("messageID").addEventListener("input", function() {
+    document.getElementById("charCount").textContent = document.getElementById("messageID").value.length;
+  });
+}
+
+  if (document.querySelector('.navbar-toggler') && document.querySelector('#navbarPrincipal')) {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarContent = document.querySelector('#navbarPrincipal');
+    navbarToggler.addEventListener('click', () => {
+      navbarContent.classList.toggle('show');
+    });
+  }
+
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
@@ -34,17 +55,6 @@ $( document ).ready(function() {
       }, false);
     });
   })();
-
-// reset  the form
-document.getElementById("contactForm").onreset = function (event) {
-  event.preventDefault(); // Prevent normal form submission
-  location.reload();
-}
-
-// Text area count characters
-document.getElementById("messageID").addEventListener("input", function() {
-  document.getElementById("charCount").textContent = document.getElementById("messageID").value.length;
-});
 
 function openHomePage(event) {
   event.preventDefault();

@@ -1,17 +1,17 @@
 <div
   class="accordion bg-transparent shadow-5-strong rounded-5"
-  id="{{item.title}}"
+  id="{{ item.title }}"
 >
   {% for accorditem in item.description %}
   <div class="accordion-item bg-transparent">
-    <h2 class="accordion-header bg-transparent" id="{{accorditem.item}}">
+    <h2 class="accordion-header bg-transparent" id="{{ accorditem.item }}">
       <button
         data-mdb-collapse-init
         class="accordion-button  text-{{accorditem.color}} bg-transparent border border-dark"
         type="button"
-        data-mdb-target="#{{accorditem.text_id}}"
+        data-mdb-target="#{{ accorditem.text_id }}"
         aria-expanded="false"
-        aria-controls="{{accorditem.text_id}}"
+        aria-controls="{{ accorditem.text_id }}"
       >
         <i
           class="fas fa-{{accorditem.icon}} text-{{accorditem.color}} fa-sm me-2 opacity-70"
@@ -21,10 +21,10 @@
     </h2>
     <div
       data-mdb-collapse-init
-      id="{{accorditem.text_id}}"
+      id="{{ accorditem.text_id }}"
       class="accordion-collapse collapse"
       aria-labelledby="{{accorditem.item}}"
-      data-mdb-parent="#{{item.title}}"
+      data-mdb-parent="#{{ item.title }}"
     >
       <div class="accordion-body">{{accorditem.text}}</div>
     </div>

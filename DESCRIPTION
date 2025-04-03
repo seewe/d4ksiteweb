@@ -12,9 +12,9 @@ Imports:
     golem,
     htmltools,
     jinjar,
-    leaflet,
-    pkgload,
-    shiny
+    shiny,
+    shiny.router,
+    stringr
 Suggests: 
     spelling,
     testthat (>= 3.0.0)

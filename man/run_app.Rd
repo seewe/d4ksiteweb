@@ -6,7 +6,7 @@
 \usage{
 run_app(
   onStart = NULL,
-  options = list(port = 9029),
+  options = list(port = 9029, shiny.jquery.version = NULL),
   enableBookmarking = NULL,
   uiPattern = "/",
   ...

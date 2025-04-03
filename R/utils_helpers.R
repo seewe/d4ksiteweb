@@ -11,6 +11,7 @@
 #'
 #'
 render_jinja_template <- function(template_file, data) {
+  library(shiny)
   # Main template path
   template_path <- app_sys(paste0(
     "app/templates/",

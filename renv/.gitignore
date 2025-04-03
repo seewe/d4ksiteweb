@@ -5,6 +5,3 @@ lock/
 python/
 sandbox/
 staging/
-.Renviron
-config.yml
-inst/golem-config.yml
