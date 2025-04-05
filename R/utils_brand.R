@@ -28,5 +28,21 @@ brand_carousel <- list(
     item_title = "Your <strong>KNOWLEDGE</strong> helps you <strong>GROW</strong>",
     item_description = "",
     item_logo = "../www/img/logn.png"
+  ),
+  item4 = list(
+    rang = 4,
+    class = "carousel-item",
+    style_color = "rgba(170, 175, 241, 0.7)",
+    item_title = "Your <strong>DATA</strong> turns into <strong>STORY</strong>",
+    item_description = "",
+    item_logo = "../www/img/logn.png"
+  ),
+  item5 = list(
+    rang = 5,
+    class = "carousel-item",
+    style_color = "rgba(255, 255, 255, 0.48)",
+    item_title = "Your <strong>BRAND</strong> shared <strong>WORLD WIDE</strong>",
+    item_description = "",
+    item_logo = "../www/img/logn.png"
   )
 )

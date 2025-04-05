@@ -94,7 +94,7 @@
   }
 
 
-/* Carousel styling */
+/* Brand page carousel styling ------------------------------------------------------------------------------------*/
 #introCarousel,
 #brand-carousel .carousel-inner,
 #brand-carousel .carousel-item,
@@ -117,7 +117,21 @@
 }
 
 #brand-carousel .carousel-item:nth-child(3) {
+    background-image: url('./img/img5.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#brand-carousel .carousel-item:nth-child(4) {
     background-image: url('./img/img4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#brand-carousel .carousel-item:nth-child(5) {
+    background-image: url('./img/img81.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -155,6 +169,7 @@
     border-color: rgb(2, 63, 52);
 }
 
+/* About page styling --------------------------------------------------------------------------------------------*/
 .about-div{
     background-image: url('./img/img4.jpg');
     background-repeat: no-repeat;
@@ -167,6 +182,7 @@
     );
 }
 
+/* Partners page styling -----------------------------------------------------------------------------------------*/
 .partners-div{
     background: linear-gradient(
         180deg,
@@ -175,6 +191,7 @@
     );
 }
 
+/* Blogs page styling -----------------------------------------------------------------------------------------*/
 .blogs-div{
     background: linear-gradient(
         0deg,
@@ -191,6 +208,7 @@
     );
 }
 
+/* Contact page styling -----------------------------------------------------------------------------------------*/
 .contact-div{
     background: linear-gradient(
         180deg,
@@ -207,6 +225,7 @@
     );
 }
 
+/* Footer page styling -----------------------------------------------------------------------------------------*/
 .social-media-div {
     background: linear-gradient(
         0deg,
@@ -243,7 +262,7 @@
     animation: pulsesgh 3.5s ease-in infinite;
 }
 
-/*profile page*/
+/*profile page -----------------------------------------------------------------------------------------------*/
 
 .profile-container {
     max-width: 1000px;
@@ -266,7 +285,7 @@
   .profile-image img {
     width: 100%;
     height: 200%;
-    border-radius: 10px;
+    border-radius: 50px;
     transform: rotate(8deg);
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
   }
@@ -275,7 +294,7 @@
   .profile-card {
     background: rgba(255, 255, 255, 0.95); /* Light transparency */
     position: relative;
-    left: 30px;
+    /*left: 30px;*/
     background: white;
     padding: 30px;
     max-width: 500px;
@@ -286,12 +305,12 @@
   }
 
   .profile-card h4 {
-    color: #007bff;
+    color:rgb(0, 0, 0);
     font-weight: bold;
   }
 
   .profile-card .stars {
-    color: #007bff;
+    color:rgb(1, 27, 56);
     font-size: 18px;
   }
 
@@ -309,7 +328,15 @@
     }
   }
 
-  .div-contact-follow-profil{
+  .div-skills-profil{
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.226),
+        rgba(255, 255, 255, 0.226) 100%
+    );
+  }
+
+  .div-follow-profil{
     background: linear-gradient(
         0deg,
         rgba(255, 255, 255, 0.226),
@@ -325,7 +352,7 @@
   );
 }
 
-.competency-div{
+.competency-profil{
   background: linear-gradient(
       0deg,
       rgba(137, 255, 220, 0.226),
@@ -333,6 +360,7 @@
   );
 }
 
+/* Light footer ------------------------------------------------------------------------------------------------ */
 .copyright-div-light
 .social-media-div-light{
   background: linear-gradient(
@@ -340,4 +368,17 @@
     rgba(137, 255, 220, 0.226),
     rgba(137, 255, 220, 0.226) 100%
 );
+}
+
+.accordion-collapse {
+  overflow: hidden;
+  transition: height 0.3s ease;
+}
+
+.accordion-icon {
+  transition: transform 0.3s;
+}
+
+.accordion-icon.rotate {
+  transform: rotate(180deg);
 }
