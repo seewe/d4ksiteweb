@@ -1,33 +1,28 @@
 <div
-  class="accordion bg-transparent shadow-5-strong rounded-5"
-  id="{{ item.title }}"
+  class="card mb-4 bg-transparent border-top border-bottom border-dark border-1 shadow-5-strong rounded-6 text-center"
+  style="max-width: 220px"
 >
-  {% for accorditem in item.description %}
-  <div class="accordion-item bg-transparent">
-    <h2 class="accordion-header bg-transparent" id="{{ accorditem.item }}">
-      <button
-        data-mdb-collapse-init
-        class="accordion-button  text-{{accorditem.color}} bg-transparent border border-dark"
-        type="button"
-        data-mdb-target="#{{ accorditem.text_id }}"
-        aria-expanded="false"
-        aria-controls="{{ accorditem.text_id }}"
-      >
-        <i
-          class="fas fa-{{accorditem.icon}} text-{{accorditem.color}} fa-sm me-2 opacity-70"
-        ></i
-        >{{accorditem.item}}
-      </button>
-    </h2>
+  <div class="row g-0">
     <div
-      data-mdb-collapse-init
-      id="{{ accorditem.text_id }}"
-      class="accordion-collapse collapse"
-      aria-labelledby="{{accorditem.item}}"
-      data-mdb-parent="#{{ item.title }}"
+      class="card-header border-bottom border-start border-end border-dark border-1 shadow-4-strong rounded-6 bg-dark bg-gradient text-white"
     >
-      <div class="accordion-body">{{accorditem.text}}</div>
+      Featured
+    </div>
+    <div class="card-body">
+      <div class="d-grid gap-0">
+        {% for accorditem in item.description %}
+        <button
+          class="btn btn-light border-0 shadow-2-strong bg-light bg-gradient bg-opacity-50 text-center border border-dark"
+          type="button"
+        >
+          <i
+            class="{{accorditem.icon}} text-{{accorditem.color}} fa-sm me-2 opacity-70"
+          ></i
+          >{{accorditem.item}}
+        </button>
+        <hr class="hr hr-blurry my-0 py-1" />
+        {% endfor %}
+      </div>
     </div>
   </div>
-  {% endfor %}
 </div>

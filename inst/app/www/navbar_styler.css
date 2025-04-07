@@ -382,3 +382,20 @@
 .accordion-icon.rotate {
   transform: rotate(180deg);
 }
+
+/* accordillon --------------------------------------------------------- */
+
+.rotate-arrow {
+  transition: transform 0.3s ease;
+}
+.rotate-arrow.rotate {
+  transform: rotate(180deg);
+}
+
+.blurry-hr {
+  border: none;
+  height: 2px;
+  background: #888;
+  filter: blur(2px);
+  margin: 2rem 0;
+}
