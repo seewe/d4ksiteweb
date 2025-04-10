@@ -72,7 +72,7 @@ about_skills <- list(
     icon = "fas fa-square-share-nodes",
     title = "SHARING",
     description = data.frame(
-      item = c("API", "Dashboards", "Website", "MobileApp", "Books"),
+      item = c("API", "Dashboards", "Website", "MobileApp", "eBooks"),
       icon = c(
         "fas fa-share-alt",
         "fas fa-desktop",

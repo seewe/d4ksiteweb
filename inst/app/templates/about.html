@@ -3,33 +3,43 @@
   <strong>
     <h1 class="text-center text-black pt-5 mb-3"></h1>
   </strong>
+  <div class="text-center mb-5 mt-0">
+    <h3>
+      A set of experts putting together their experience together <br />
+      to help companies grow on multiple areas.
+    </h3>
+  </div>
   <div class="row">
     {% for key, item in data_template.about_skills %}
     <div class="col">
       <div class="col-lg-12 mb-5">
-        <div class="d-flex align-items-start">
-          <div class="flex-shrink-0">
-            <div class="p-3 badge-dark rounded-pill">
-              <i class="{{item.icon}} fa-lg text-light fa-fw"></i>
+        <div class="d-flex flex-column align-items-center">
+          <div class="flex-shrink-0" style="margin-bottom: -18px; z-index: -1">
+            <div
+              class="p-3 badge-dark rounded-pill shadow-5-strong bg-transparent bg-gradient"
+            >
+              <i class="{{item.icon}} fa-lg text-dark fa-fw"></i>
             </div>
           </div>
-          <div class="flex-grow-1 ms-4">
-            <h2 class="fw-bold mb-1">{{item.title}}</h2>
-
+          <div class="flex-grow-1">
             {% include "about_accordions.html" %}
 
-            <div class="d-flex align-items-start mt-5">
-              <div class="flex-shrink-0">
-                <div class="p-0 badge-primary rounded-4 shadow-5-strong">
-                  <img
-                    class="rounded-4 shadow-4"
-                    src="{{item.expert_profil}}"
-                    alt="Avatar"
-                    style="width: 50px; height: 50px"
-                  />
+            <div
+              class="d-flex flex-column align-items-center"
+              style="margin-top: -10px"
+            >
+              <div>
+                <div class="p-0 badge-primary rounded-4 shadow-5-strong mb-2">
+                  <a href="{{item.expert_link}}" onclick="window.onload()"
+                    ><img
+                      class="rounded-4 shadow-5-strong"
+                      src="{{item.expert_profil}}"
+                      alt="Avatar"
+                      style="width: 50px; height: 50px; z-index: 2"
+                  /></a>
                 </div>
               </div>
-              <div class="flex-grow-1 ms-4">
+              <div class="d-flex flex-column align-items-center">
                 <p class="fw-bold mb-1">{{item.expert_name}}</p>
                 <small
                   ><a href="{{item.expert_link}}" onclick="window.onload()"

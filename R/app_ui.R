@@ -13,8 +13,9 @@ app_ui <- function(request) {
       shiny.router::route("/", mod_home_ui("home_1")),
       shiny.router::route("developer", mod_developer_ui("developer_1")),
       shiny.router::route("storage", mod_developer_ui("storage_1")),
-      shiny.router::route("modeler", htmltools::p("modelers page")),
-      shiny.router::route("publisher", htmltools::p("publisher page")),
+      shiny.router::route("modeler", mod_developer_ui("modeler_1")),
+      shiny.router::route("publisher", mod_developer_ui("publisher_1")),
+      shiny.router::route("clouder", mod_developer_ui("clouder_1")),
       shiny.router::route("moredocument", htmltools::p("More blog documents"))
     )
   )

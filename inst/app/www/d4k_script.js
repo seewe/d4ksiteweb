@@ -21,23 +21,6 @@ if (document.querySelector('.navbar-toggler') && document.querySelector('#navbar
   });
 }
 
-if(document.querySelectorAll('.accordion-button')){
-  const accordionButtons = document.querySelectorAll('.accordion-button');
-
-  accordionButtons.forEach(button => {
-    button.addEventListener('click', function() {
-      const target = document.querySelector(this.getAttribute('data-mdb-target'));
-
-      if (target.classList.contains('show')) {
-        target.classList.remove('show');
-      } else {
-        document.querySelectorAll('.accordion-body').forEach(body => body.classList.remove('show'));
-        target.classList.add('show');
-      }
-    });
-  });
-}
-
 // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {
     'use strict';

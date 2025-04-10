@@ -36,7 +36,16 @@ app_server <- function(input, output, session) {
   shiny::callModule(mod_developer_server, "developer_1")
 
   # Storage page
-  shiny::callModule(mod_storage_server, "storage_1")
+  shiny::callModule(mod_developer_server, "storage_1")
+
+  # Modeler page
+  shiny::callModule(mod_developer_server, "modeler_1")
+
+  # Clouder page
+  shiny::callModule(mod_developer_server, "clouder_1")
+
+  # Publisher page
+  shiny::callModule(mod_developer_server, "publisher_1")
 
   # router
   shiny.router::router_server("/")
