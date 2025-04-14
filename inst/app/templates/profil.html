@@ -1,44 +1,70 @@
-<section>
-  <div class="container profile-container my-0" style="padding: 100px 0 0">
-    <!-- Profile Image with Tilted Background -->
-    <div class="profile-image">
-      <img
-        src="https://mdbootstrap.com/img/new/standard/nature/184.jpg"
-        class="w-75 h-auto"
-        alt="Profile Picture"
-      />
-    </div>
-    <!-- Overlapping Text Card -->
-    <div class="profile-card">
-      <h4>Anna Doe</h4>
-      <p><strong>Graphic Designer</strong></p>
-      <p>
-        Nunc tincidunt vulputate elit. Mauris varius purus malesuada neque
-        iaculis malesuada. Aenean gravida magna orci, non efficitur est porta
-        id.
-      </p>
-      <p>
-        Ad, at blanditiis quaerat laboriosam officia incidunt cupiditate
-        dignissimos voluptates eius aliquid minus praesentium!
-      </p>
-      <p>
-        Nunc tincidunt vulputate elit. Mauris varius purus malesuada neque
-        iaculis malesuada. Aenean gravida magna orci, non efficitur est porta
-        id.
-      </p>
-      <p>
-        Nunc tincidunt vulputate elit. Mauris varius purus malesuada neque
-        iaculis malesuada. Aenean gravida magna orci, non efficitur est porta
-        id.
-      </p>
-      <p>
-        Nunc tincidunt vulputate elit. Mauris varius purus malesuada neque
-        iaculis malesuada. Aenean gravida magna orci, non efficitur est porta
-        id.
-      </p>
+<!DOCTYPE html>
+<html lang="en">
+  {% include "header.html" %}
+  <body>
+    <!--Navbar-->
+    {% include "navbar.html" %}
 
-      <!-- Star Ratings -->
-      <div class="stars">★★★★★</div>
+    <!--Developer profil-->
+    <div
+      class="profil-div mt-0 pb-0 shadow-0-strong"
+      style="
+        background: linear-gradient(
+          180deg,
+          {{data_template.profil_theme}},
+          rgba(255, 255, 255, 0.267) 100%
+        );
+      "
+    >
+      {% include "profil_card.html" %}
     </div>
-  </div>
-</section>
+
+    <!--competencies-->
+    <div class="div-skills-profil d-flex align-items-center">
+      <hr class="flex-grow-1 border border-black" />
+      <span
+        class="my-5 mx-0 px-5 py-3 text-black border border-black rounded-9 shadow-5-strong"
+      >
+        <h4>Skills</h4></span
+      >
+      <hr class="flex-grow-1 border border-black" />
+    </div>
+
+    <div
+      class="competency-profil mt-0 pb-0 shadow-0-strong"
+      style="
+        background: linear-gradient(
+          0deg,
+          {{data_template.profil_theme}},
+          rgba(255, 255, 255, 0.267) 100%
+        );
+      "
+    >
+      {% include "partners.html" %}
+    </div>
+
+    <div
+      class="div-follow-profil d-flex align-items-center"
+      style="
+        background: linear-gradient(
+          0deg,
+          rgba(255, 255, 255, 0.226),
+          {{data_template.profil_theme}} 100%
+        );
+      "
+    >
+      <hr class="flex-grow-1 border border-black" />
+      <span
+        class="my-5 mx-0 px-5 py-3 text-black border border-black rounded-9 shadow-5-strong"
+      >
+        <h4>follow us</h4></span
+      >
+      <hr class="flex-grow-1 border border-black" />
+    </div>
+
+    <!-- MDB JS script-->
+    {% include "scripts.html" %}
+  </body>
+  <!--footer-->
+  {% include "footerLight.html" %}
+</html>

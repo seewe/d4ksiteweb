@@ -294,7 +294,6 @@
   .profile-card {
     background: rgba(255, 255, 255, 0.95); /* Light transparency */
     position: relative;
-    /*left: 30px;*/
     background: white;
     padding: 30px;
     max-width: 500px;
@@ -335,31 +334,7 @@
         rgba(255, 255, 255, 0.226) 100%
     );
   }
-
-  .div-follow-profil{
-    background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 0.226),
-        rgba(137, 255, 220, 0.226) 100%
-    );
-  }
-
-.profil-div{
-  background: linear-gradient(
-      180deg,
-      rgba(137, 255, 220, 0.226),
-      rgba(255, 255, 255, 0.267) 100%
-  );
-}
-
-.competency-profil{
-  background: linear-gradient(
-      0deg,
-      rgba(137, 255, 220, 0.226),
-      rgba(255, 255, 255, 0.267) 100%
-  );
-}
-
+  
 /* Light footer ------------------------------------------------------------------------------------------------ */
 .copyright-div-light
 .social-media-div-light{

@@ -32,6 +32,37 @@ $(document).ready(function() {
       wrap: true       // permet la boucle infinie
     });
   }, 5);
+
+  // multiItemCarouselModeler
+
+  setInterval(function () {
+    $('#multiItemCarouselModeler').carousel({
+      interval: 5000, // on gère manuellement
+      wrap: true       // permet la boucle infinie
+    });
+  }, 5);
+
+  // multiItemCarouselPublisher
+
+  setInterval(function () {
+    $('#multiItemCarouselPublisher').carousel({
+      interval: 5000, // on gère manuellement
+      wrap: true       // permet la boucle infinie
+    });
+  }, 5);
+
+  // multiItemCarouselClouder
+
+  setInterval(function () {
+    $('#multiItemCarouselClouder').carousel({
+      interval: 5000, // on gère manuellement
+      wrap: true       // permet la boucle infinie
+    });
+  }, 5);
+
+
+
+
 })
 
 

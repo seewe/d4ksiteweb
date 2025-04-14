@@ -4,10 +4,8 @@
     <h1 class="text-center text-black pt-5 mb-3"></h1>
   </strong>
 
-  <div
-    class="row bg-transparent text-dark rounded-5 border border-secondary opacity-90 shadow"
-  >
-    <div class="col-md-6 pt-4">
+  <div class="card text-center bg-transparent">
+    <div class="card-body">
       <div class="row d-flex justify-content-center">
         <div class="col-md-12">
           <form id="contactForm" class="needs-validation" novalidate>
@@ -105,33 +103,22 @@
           </form>
         </div>
       </div>
-    </div>
-
-    <div class="vr vr-blurry mx-5 mb-0"></div>
-
-    <div class="col-md-4 pt-4">
-      {% for key, item in data_template.contact_list %}
-      <div class="row">
-        <div class="col-lg-12 mb-5">
-          <div class="d-flex align-items-start">
-            <div class="flex-shrink-0">
-              <div class="p-3 badge-dark rounded-pill">
-                <i class="fas fa-{{item.icon}} fa-lg text-light fa-fw"></i>
+      <hr class="hr hr-blurry" />
+      <div class="row px-5">
+        {% for key, item in data_template.contact_list %}
+        <div class="col-md-12">
+          <div class="col-lg-12 mb-3">
+            <div class="d-flex align-items-start">
+              <div class="flex-grow-1">
+                <p class="text-dark mb-1">
+                  <i class="fas fa-envelope"></i> {{item.mail_adress}}
+                </p>
               </div>
-            </div>
-            <div class="flex-grow-1 ms-4">
-              <p class="fw-bold mb-1">{{item.title}}</p>
-              <p class="text-dark mb-1">
-                <i class="fas fa-at"></i> {{item.mail_adress}}
-              </p>
-              <p class="text-dark mb-1">
-                <i class="fas fa-phone"></i> {{item.phone}}
-              </p>
             </div>
           </div>
         </div>
+        {%endfor%}
       </div>
-      {%endfor%}
     </div>
   </div>
 </section>

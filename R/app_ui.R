@@ -11,11 +11,11 @@ app_ui <- function(request) {
     # Your application UI logic
     shiny.router::router_ui(
       shiny.router::route("/", mod_home_ui("home_1")),
-      shiny.router::route("developer", mod_developer_ui("developer_1")),
-      shiny.router::route("storage", mod_developer_ui("storage_1")),
-      shiny.router::route("modeler", mod_developer_ui("modeler_1")),
-      shiny.router::route("publisher", mod_developer_ui("publisher_1")),
-      shiny.router::route("clouder", mod_developer_ui("clouder_1")),
+      shiny.router::route("developer", mod_profil_ui("profil_1")),
+      shiny.router::route("storage", mod_profil_ui("profil_2")),
+      shiny.router::route("modeler", mod_profil_ui("profil_3")),
+      shiny.router::route("publisher", mod_profil_ui("profil_4")),
+      shiny.router::route("clouder", mod_profil_ui("profil_5")),
       shiny.router::route("moredocument", htmltools::p("More blog documents"))
     )
   )

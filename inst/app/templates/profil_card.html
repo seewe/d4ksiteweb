@@ -1,0 +1,21 @@
+<section>
+  <div class="container profile-container my-0" style="padding: 100px 0 0">
+    <!-- Profile Image with Tilted Background -->
+    <div class="profile-image">
+      <img
+        src="{{data_template.profil_card.picture_link}}"
+        class="w-75 h-auto"
+        alt="Profile Picture"
+      />
+    </div>
+    <!-- Overlapping Text Card -->
+    <div class="profile-card">
+      <h4>{{data_template.profil_card.name}}</h4>
+      <p><strong>{{data_template.profil_card.title}}</strong></p>
+      <p>{{data_template.profil_card.description}}</p>
+
+      <!-- Star Ratings -->
+      <div class="stars">{{data_template.profil_card.stars}}</div>
+    </div>
+  </div>
+</section>

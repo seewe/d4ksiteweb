@@ -4,6 +4,9 @@
 #'
 #' @noRd
 
+about_comment <- "Experts putting together their experience to help companies grow on multiples areas. "
+
+
 about_skills <- list(
   coding = list(
     icon = "fas fa-laptop-code",
@@ -22,7 +25,8 @@ about_skills <- list(
     expert_name = "Valère",
     expert_description = "The Developper",
     expert_profil = "https://mdbootstrap.com/img/new/standard/nature/184.jpg",
-    expert_link = "#!/developer"
+    expert_link = "#!/developer",
+    expert_theme = "rgba(137, 255, 220, 0.226)"
   ),
   database = list(
     icon = "fas fa-database",
@@ -41,7 +45,8 @@ about_skills <- list(
     expert_name = "Sergio",
     expert_description = "The Storage",
     expert_profil = "https://mdbootstrap.com/img/new/standard/nature/185.jpg",
-    expert_link = "#!/storage"
+    expert_link = "#!/storage",
+    expert_theme = "rgba(255, 231, 137, 0.23)"
   ),
   modeling = list(
     icon = "fas fa-brain",
@@ -66,7 +71,8 @@ about_skills <- list(
     expert_name = "Elvis",
     expert_description = "The Modeler",
     expert_profil = "https://mdbootstrap.com/img/new/standard/nature/186.jpg",
-    expert_link = "#!/modeler"
+    expert_link = "#!/modeler",
+    expert_theme = "rgba(137, 143, 255, 0.23)"
   ),
   sharing = list(
     icon = "fas fa-square-share-nodes",
@@ -85,7 +91,8 @@ about_skills <- list(
     expert_name = "Vanessa",
     expert_description = "The Communicator",
     expert_profil = "https://mdbootstrap.com/img/new/standard/nature/187.jpg",
-    expert_link = "#!/publisher"
+    expert_link = "#!/publisher",
+    expert_theme = "rgba(255, 137, 253, 0.23)"
   ),
   cloud = list(
     icon = "fas fa-cloud",
@@ -104,6 +111,7 @@ about_skills <- list(
     expert_name = "Guillaume",
     expert_description = "The Clouder",
     expert_profil = "https://mdbootstrap.com/img/new/standard/nature/188.jpg",
-    expert_link = "#!/clouder"
+    expert_link = "#!/clouder",
+    expert_theme = "rgba(57, 57, 57, 0.23)"
   )
 )

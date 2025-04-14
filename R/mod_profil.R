@@ -1,4 +1,4 @@
-#' home UI Function
+#' profil UI Function
 #'
 #' @description A shiny Module.
 #'
@@ -7,21 +7,25 @@
 #' @noRd
 #'
 #' @importFrom shiny NS tagList
-mod_home_ui <- function(id) {
+mod_profil_ui <- function(id) {
   ns <- shiny::NS(id)
   shiny::uiOutput(ns("html_content"))
 }
 
-#' home Server Functions
+#' profil Server Functions
 #'
 #' @noRd
-mod_home_server <- function(input, output, session, RV) {
+mod_profil_server <- function(
+  input,
+  output,
+  session,
+  RV_page
+) {
   ns <- session$ns
-
   output$html_content <- shiny::renderUI({
     html_content <- render_jinja_template(
-      "main_page.html",
-      data = RV
+      "profil.html",
+      data = RV_page
     )
     # cat(html_content)
     HTML(html_content) # Convert to HTML output
@@ -29,7 +33,7 @@ mod_home_server <- function(input, output, session, RV) {
 }
 
 ## To be copied in the UI
-# callModule(mod_home_ui, "home_1")
+# callModule(mod_profil_ui, "profil_1")
 
 ## To be copied in the server
-# callModule(mod_home_server, "home_1")
+# callModule(mod_profil_server, "profil_1")
